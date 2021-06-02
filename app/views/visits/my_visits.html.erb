@@ -1,4 +1,6 @@
-<h2><%= @current_user.first_name%>'s Past Visits</h2>
+<div>
+  <h1><%= @current_user.first_name%>'s Past Visits</h1>
+</div>
 
 <table border="1">
   <tr>
@@ -7,6 +9,7 @@
     <th>Rating</th>
     <th>Comments</th>
     <th>Image</th>
+    <th>Number of Likes</th>
     <th>Save this Idea!</th>
     <th></th>
   </tr>
@@ -17,6 +20,7 @@
     <td><%= a_visit.rating %></td>
     <td><%= a_visit.comment %></td>
     <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
+    <td><%= a_visit.likes_count %></td>
     <td>
       <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
       <% if like == nil %>
@@ -25,12 +29,11 @@
         <button>Like</button>
       </form>
       <% else %>
-        <a href="/delete_like/<%= like.id %>">
-          Unlike
-        </a>
+        <p>Saved for Later!</p>
+        <a href="/delete_like/<%= like.id %>"><button>Remove</button></a>
       <% end %>
     </td>
     <td><a href="visits/<%= a_visit.id %>">View details</a></td>
-  <tr>
+  </tr>
   <% end %>
 </table>

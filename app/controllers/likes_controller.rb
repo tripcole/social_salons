@@ -1,4 +1,10 @@
 class LikesController < ApplicationController
+  def my_likes
+    matching_likes = Like.all.where({ :fan_id => @current_user.id }) 
+    @my_likes = matching_likes.order({ :created_at => :desc })
+    render({ :template => "likes/my_likes.html.erb"})
+  end
+
   def index
     matching_likes = Like.all
 
@@ -24,7 +30,7 @@ class LikesController < ApplicationController
 
     if the_like.valid?
       the_like.save
-      redirect_to("/likes", { :notice => "Like created successfully." })
+      redirect_to("/my_likes", { :notice => "Like created successfully." })
     else
       redirect_to("/likes", { :notice => "Like failed to create successfully." })
     end

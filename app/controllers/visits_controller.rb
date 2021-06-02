@@ -8,7 +8,7 @@ class VisitsController < ApplicationController
   def index
     matching_visits = Visit.all
 
-    @list_of_visits = matching_visits.order({ :created_at => :desc })
+    @list_of_visits = matching_visits.order({ :rating => :desc })
 
     render({ :template => "visits/index.html.erb" })
   end
