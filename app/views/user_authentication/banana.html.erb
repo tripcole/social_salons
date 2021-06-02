@@ -1,0 +1,10 @@
+<p>
+This is <%=@banana%>
+<%=@current_user.id %>
+</p>
+
+<% if @banana.to_i == @current_user.id %>
+<%= TRUE %>
+<% else %>
+<%= FALSE %>
+<% end %>

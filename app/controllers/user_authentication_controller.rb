@@ -9,22 +9,34 @@ class UserAuthenticationController < ApplicationController
     render({ :template => "user_authentication/index.html.erb" })
   end
 
+  
+
+  def my_visits 
+    the_id = params.fetch("path_id") 
+    if the_id.to_i == @current_user.id
+      matching_visits = Visit.all.where({ :user_id => @current_user.id }) 
+      @my_visits = matching_visits.order({ :rating => :desc })
+      render({ :template => "visits/my_visits.html.erb" })
+    else
+      redirect_to("/users/#{the_id}") 
+    end
+  end
+  
+  def my_likes
+    the_id = params.fetch("path_id") 
+    if the_id.to_i == @current_user.id
+      matching_likes = Like.all.where({ :fan_id => @current_user.id }) 
+      @my_likes = matching_likes.order({ :created_at => :desc })
+      render({ :template => "likes/my_likes.html.erb"})
+    else
+      redirect_to("/users/#{the_id}") 
+    end
+  end
+
   def show
     matching_users = User.all
     @the_profile = matching_users.where({ :id => params.fetch("path_id") }).at(0)
     render({ :template => "user_authentication/show.html.erb" })
-  end
-
-  def my_visits 
-    matching_visits = Visit.all.where({ :user_id => @current_user.id }) 
-    @my_visits = matching_visits.order({ :rating => :desc })
-    render({ :template => "visits/my_visits.html.erb" })
-  end
-
-  def my_likes
-    matching_likes = Like.all.where({ :fan_id => @current_user.id }) 
-    @my_likes = matching_likes.order({ :created_at => :desc })
-    render({ :template => "likes/my_likes.html.erb"})
   end
 
   def sign_in_form
