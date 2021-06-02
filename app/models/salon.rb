@@ -15,4 +15,5 @@
 #  updated_at  :datetime         not null
 #
 class Salon < ApplicationRecord
+  has_many(:visits, { :class_name => "Visit", :foreign_key => "salon_id", :dependent => :destroy })
 end
