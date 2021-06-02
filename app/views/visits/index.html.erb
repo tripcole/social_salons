@@ -20,7 +20,7 @@
     <td><%= a_visit.rating %></td>
     <td><%= a_visit.comment %></td>
     <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
-    <t<td><%= a_visit.likes_count %></td>
+    <td><%= a_visit.likes_count %></td>
     <td>
       <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
       <% if like == nil %>
