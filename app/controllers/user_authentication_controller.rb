@@ -1,7 +1,6 @@
 class UserAuthenticationController < ApplicationController
   # Uncomment this if you want to force users to sign in before any other actions
   # skip_before_action(:force_user_sign_in, { :only => [:sign_up_form, :create, :sign_in_form, :create_cookie] })
-
   # Eventually remove
   def index
     matching_users = User.all
@@ -9,34 +8,35 @@ class UserAuthenticationController < ApplicationController
     render({ :template => "user_authentication/index.html.erb" })
   end
 
-  
+  # before_action(:load_user, { :only => [:show, :my_visits, :my_likes] })
+  # before_action(:must_be_allowed, { :only => [:show, :my_visits, :my_likes] })
+  def load_user
+    the_id = params.fetch("path_id")
+    @user = User.where({ :id => the_id }).at(0)
+  end
 
-  def my_visits 
-    the_id = params.fetch("path_id") 
-    if the_id.to_i == @current_user.id
-      matching_visits = Visit.all.where({ :user_id => @current_user.id }) 
-      @my_visits = matching_visits.order({ :rating => :desc })
-      render({ :template => "visits/my_visits.html.erb" })
-    else
-      redirect_to("/users/#{the_id}") 
-    end
-  end
-  
-  def my_likes
-    the_id = params.fetch("path_id") 
-    if the_id.to_i == @current_user.id
-      matching_likes = Like.all.where({ :fan_id => @current_user.id }) 
-      @my_likes = matching_likes.order({ :created_at => :desc })
-      render({ :template => "likes/my_likes.html.erb"})
-    else
-      redirect_to("/users/#{the_id}") 
-    end
-  end
+  # def must_be_allowed
+  #   if (@user != @current_user) && (@user.private && @user.followers.exclude?(@current_user))
+  #     redirect_to("/", { :notice => "You're not authorized for that." })
+  #   end
+  # end
 
   def show
     matching_users = User.all
     @the_profile = matching_users.where({ :id => params.fetch("path_id") }).at(0)
     render({ :template => "user_authentication/show.html.erb" })
+  end
+
+  def my_visits 
+    matching_visits = Visit.all.where({ :user_id => @current_user.id }) 
+    @my_visits = matching_visits.order({ :rating => :desc })
+    render({ :template => "visits/my_visits.html.erb" })
+  end
+  
+  def my_likes
+    matching_likes = Like.all.where({ :fan_id => @current_user.id }) 
+    @my_likes = matching_likes.order({ :created_at => :desc })
+    render({ :template => "likes/my_likes.html.erb"})
   end
 
   def sign_in_form
