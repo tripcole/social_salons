@@ -1,0 +1,11 @@
+﻿id,username,first_name,last_name,email,password
+1,JohnDoe1,John,Doe,johndoe1@test.com,baseball
+2,SarahDoe1,Sarah,Doe,johndoe2@test.com,baseball
+3,ChadDoe1,Chad,Doe,johndoe3@test.com,baseball
+4,RyanDoe1,Ryan,Doe,johndoe4@test.com,baseball
+5,ErnieDoe1,Ernie,Doe,johndoe5@test.com,baseball
+6,BertDoe1,Bert,Doe,johndoe6@test.com,baseball
+7,ElmoDoe1,Elmo,Doe,johndoe7@test.com,baseball
+8,CookieDoe1,Cookie,Doe,johndoe8@test.com,baseball
+9,GroverDoe1,Grover,Doe,johndoe9@test.com,baseball
+10,TripCole1,Trip,Cole,johndoe10@test.com,baseball
