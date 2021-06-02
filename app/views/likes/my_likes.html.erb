@@ -21,7 +21,10 @@
     <td><%= a_like.visit.comment %></td>
     <td><img src="https://robohash.org/<%= a_like.visit.id %>"></td>
     <td><%= a_like.visit.likes_count %></td>
-    <td><a href="/delete_like/<%= a_like.id %>"><button>Remove</button></a></td>
+    <td>
+      <p>Saved on <%= a_like.created_at.strftime('%D') %> </p>
+      <a href="/delete_like/<%= a_like.id %>"><button>Remove</button></a>
+    </td>
     <td><a href="visits/<%= a_like.visit.id %>">View details</a></td>
   </tr>
   <% end %>
