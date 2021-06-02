@@ -1,4 +1,10 @@
 class VisitsController < ApplicationController
+  def my_visits 
+    matching_visits = Visit.all.where({ :user_id => @current_user.id }) 
+    @my_visits = matching_visits.order({ :rating => :desc })
+    render({ :template => "visits/my_visits.html.erb" })
+  end
+
   def index
     matching_visits = Visit.all
 

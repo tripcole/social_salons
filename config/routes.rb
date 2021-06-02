@@ -46,8 +46,8 @@ Rails.application.routes.draw do
   post("/insert_visit", { :controller => "visits", :action => "create" })
           
   # READ
-  get("/visits", { :controller => "visits", :action => "index" })
-  
+  get("/my_visits", { :controller => "visits", :action => "my_visits" })
+  get("/visits", { :controller => "visits", :action => "index" })  
   get("/visits/:path_id", { :controller => "visits", :action => "show" })
   
   # UPDATE

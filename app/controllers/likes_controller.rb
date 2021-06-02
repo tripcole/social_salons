@@ -19,7 +19,7 @@ class LikesController < ApplicationController
 
   def create
     the_like = Like.new
-    the_like.fan_id = params.fetch("query_fan_id")
+    the_like.fan_id = @current_user.id
     the_like.visit_id = params.fetch("query_visit_id")
 
     if the_like.valid?
