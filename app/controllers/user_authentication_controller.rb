@@ -11,11 +11,21 @@ class UserAuthenticationController < ApplicationController
 
   def show
     matching_users = User.all
-    @the_profile = matching_users.where({ :username => params.fetch("path_username") }).at(0)
-    #@profuser = matching_users.where({ :id => params.fetch("id") }).at(0)
+    @the_profile = matching_users.where({ :id => params.fetch("path_id") }).at(0)
     render({ :template => "user_authentication/show.html.erb" })
   end
 
+  def my_visits 
+    matching_visits = Visit.all.where({ :user_id => @current_user.id }) 
+    @my_visits = matching_visits.order({ :rating => :desc })
+    render({ :template => "visits/my_visits.html.erb" })
+  end
+
+  def my_likes
+    matching_likes = Like.all.where({ :fan_id => @current_user.id }) 
+    @my_likes = matching_likes.order({ :created_at => :desc })
+    render({ :template => "likes/my_likes.html.erb"})
+  end
 
   def sign_in_form
     render({ :template => "user_authentication/sign_in.html.erb" })

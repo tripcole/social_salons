@@ -1,10 +1,4 @@
 class LikesController < ApplicationController
-  def my_likes
-    matching_likes = Like.all.where({ :fan_id => @current_user.id }) 
-    @my_likes = matching_likes.order({ :created_at => :desc })
-    render({ :template => "likes/my_likes.html.erb"})
-  end
-
   def index
     matching_likes = Like.all
 

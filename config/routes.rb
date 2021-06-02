@@ -27,7 +27,6 @@ Rails.application.routes.draw do
   post("/insert_like", { :controller => "likes", :action => "create" })
           
   # READ
-  get("/my_likes", { :controller => "likes", :action => "my_likes" })
   get("/likes", { :controller => "likes", :action => "index" })
   get("/likes/:path_id", { :controller => "likes", :action => "show" })
   
@@ -46,7 +45,6 @@ Rails.application.routes.draw do
   post("/insert_visit", { :controller => "visits", :action => "create" })
           
   # READ
-  get("/my_visits", { :controller => "visits", :action => "my_visits" })
   get("/visits", { :controller => "visits", :action => "index" })  
   get("/visits/:path_id", { :controller => "visits", :action => "show" })
   
@@ -80,7 +78,9 @@ Rails.application.routes.draw do
 
   # Routes for the User account:
   get("/users", { :controller => "user_authentication", :action => "index" })
-  get("/users/:path_username", { :controller => "user_authentication", :action => "show" })
+  get("/users/:path_id", { :controller => "user_authentication", :action => "show" })
+  get("/users/:path_id/visits", { :controller => "user_authentication", :action => "my_visits" })
+  get("/users/:path_id/likes", { :controller => "user_authentication", :action => "my_likes" })
 
   # SIGN UP FORM
   get("/user_sign_up", { :controller => "user_authentication", :action => "sign_up_form" })        
