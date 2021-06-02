@@ -17,6 +17,22 @@ class FollowRequestsController < ApplicationController
     render({ :template => "follow_requests/show.html.erb" })
   end
 
+  def my_followers
+    matching_followers = FollowRequest.all.where({ :recipient_id => @current_user.id })
+    @current_followers = matching_followers.where({ :status => "accepted" })
+    @pending_followers = matching_followers.where({ :status => "pending" })
+
+    render({ :template => "follow_requests/my_followers.html.erb" })
+  end
+
+  def my_following
+    matching_following = FollowRequest.all.where({ :sender_id => @current_user.id })
+    @current_following = matching_following.where({ :status => "accepted" })
+    @pending_following = matching_followers.where({ :status => "pending" })
+    
+    render({ :template => "follow_requests/my_following.html.erb" })
+  end
+
   def create
     the_follow_request = FollowRequest.new
     the_follow_request.sender_id = @current_user.id
