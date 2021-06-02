@@ -10,10 +10,10 @@ class UserAuthenticationController < ApplicationController
 
   # before_action(:load_user, { :only => [:show, :my_visits, :my_likes] })
   # before_action(:must_be_allowed, { :only => [:show, :my_visits, :my_likes] })
-  def load_user
-    the_id = params.fetch("path_id")
-    @user = User.where({ :id => the_id }).at(0)
-  end
+  # def load_user
+  #   the_id = params.fetch("path_id")
+  #   @user = User.where({ :id => the_id }).at(0)
+  # end
 
   # def must_be_allowed
   #   if (@user != @current_user) && (@user.private && @user.followers.exclude?(@current_user))
@@ -23,7 +23,17 @@ class UserAuthenticationController < ApplicationController
 
   def show
     matching_users = User.all
-    @the_profile = matching_users.where({ :id => params.fetch("path_id") }).at(0)
+    @the_user = matching_users.where({ :id => params.fetch("path_id") }).at(0)
+    matching_visits = Visit.all.where({ :user_id => @the_user.id })
+    @user_visits = matching_visits.order({ :rating => :desc })
+    
+    matching_followers = FollowRequest.all.where({ :recipient_id => @the_user.id })
+    @user_followers = matching_followers.where({ :status => "accepted" })
+
+    matching_following = FollowRequest.all.where({ :sender_id => @the_user.id })
+    @user_following = matching_following.where({ :status => "accepted" })
+
+
     render({ :template => "user_authentication/show.html.erb" })
   end
 

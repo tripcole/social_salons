@@ -1,1 +1,71 @@
-<%= @the_profile.first_name %>
+<h1> User Profile </h1>
+<h2> <%= @the_user.username %>'s Information </h2>
+
+
+<div>First Name: <%= @the_user.first_name %></div>
+<div>Last Name: <%= @the_user.last_name %></div>
+<div>Followers: <%= @user_followers.count %> </div>
+<div>Following: <%= @user_following.count %> </div>
+
+
+<div>Current Status:
+  <% if @user != @current_user %>
+    <% follow_request = FollowRequest.where({ :sender_id => @current_user.id, :recipient_id => @the_user.id }).at(0) %>
+        <% if follow_request == nil %>
+          <form action="/insert_follow_request" method="post">
+            <input type="hidden" name="query_recipient_id" value="<%= @the_user.id %>">
+            <button>
+              Follow
+            </button>
+          </form>
+        <% elsif follow_request.status == "pending" %>
+          Follow Request Sent.
+          <a href="/delete_follow_request/<%= follow_request.id %>">Cancel</a>
+        <% elsif follow_request.status == "accepted" %>
+          Following.
+          <a href="/delete_follow_request/<%= follow_request.id %>">Unfollow</a>
+        <% end %>
+    <% end %>
+  </div>
+<hr>
+
+<h2><%= @the_user.username%>'s Recent Visits</h2>
+
+<table border="1">
+  <tr>
+    <th>Visit Date</th>
+    <th>Salon Name</th>
+    <th>Rating</th>
+    <th>Comments</th>
+    <th>Image</th>
+    <th>Number of Likes</th>
+    <th>Save this Idea!</th>
+    <th></th>
+  </tr>
+  <% @user_visits.each do |a_visit| %>
+  <tr>
+    <td><%= a_visit.visit_date.strftime('%D') %></td>
+    <td><%= a_visit.salon.name %></td>
+    <td><%= a_visit.rating %></td>
+    <td><%= a_visit.comment %></td>
+    <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
+    <td><%= a_visit.likes_count %></td>
+    <td>
+      <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
+      <% if like == nil %>
+      <form action="/insert_like" method="post">
+        <input type="hidden" value="<%= a_visit.id %>" name="query_visit_id">
+        <button>Like</button>
+      </form>
+      <% else %>
+        <p>Saved for Later!</p>
+        <a href="/delete_like/<%= like.id %>"><button>Remove</button></a>
+      <% end %>
+    </td>
+    <td><a href="visits/<%= a_visit.id %>">View details</a></td>
+  </tr>
+  <% end %>
+</table>
+
+
+
