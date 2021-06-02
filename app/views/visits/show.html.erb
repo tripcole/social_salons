@@ -1,0 +1,161 @@
+<div>
+  <div>
+    <h1>
+      Visit #<%= @the_visit.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/visits">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_visit/<%= @the_visit.id %>">
+          Delete visit
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Visit date
+      </dt>
+      <dd>
+        <%= @the_visit.visit_date %>
+      </dd>
+
+      <dt>
+        User
+      </dt>
+      <dd>
+        <%= @the_visit.user_id %>
+      </dd>
+
+      <dt>
+        Salon
+      </dt>
+      <dd>
+        <%= @the_visit.salon_id %>
+      </dd>
+
+      <dt>
+        Rating
+      </dt>
+      <dd>
+        <%= @the_visit.rating %>
+      </dd>
+
+      <dt>
+        Comment
+      </dt>
+      <dd>
+        <%= @the_visit.comment %>
+      </dd>
+
+      <dt>
+        Image
+      </dt>
+      <dd>
+        <%= @the_visit.image %>
+      </dd>
+
+      <dt>
+        Likes count
+      </dt>
+      <dd>
+        <%= @the_visit.likes_count %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_visit.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_visit.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit visit
+    </h2>
+
+    <form action="/modify_visit/<%= @the_visit.id %>"  method="post" >
+      <div>
+        <label for="visit_date_box">
+          Visit date
+        </label>
+
+        <input type="date" id="visit_date_box" name="query_visit_date" value="<%= @the_visit.visit_date %>">
+      </div>
+
+      <div>
+        <label for="user_id_box">
+          User
+        </label>
+
+        <input type="text" id="user_id_box" name="query_user_id" value="<%= @the_visit.user_id %>">
+      </div>
+
+      <div>
+        <label for="salon_id_box">
+          Salon
+        </label>
+
+        <input type="text" id="salon_id_box" name="query_salon_id" value="<%= @the_visit.salon_id %>">
+      </div>
+
+      <div>
+        <label for="rating_box">
+          Rating
+        </label>
+
+        <input type="text" id="rating_box" name="query_rating" value="<%= @the_visit.rating %>">
+      </div>
+
+      <div>
+        <label for="comment_box">
+          Comment
+        </label>
+
+        <input type="text" id="comment_box" name="query_comment" value="<%= @the_visit.comment %>">
+      </div>
+
+      <div>
+        <label for="image_box">
+          Image
+        </label>
+
+        <input type="text" id="image_box" name="query_image" value="<%= @the_visit.image %>">
+      </div>
+
+      <div>
+        <label for="likes_count_box">
+          Likes count
+        </label>
+
+        <input type="text" id="likes_count_box" name="query_likes_count" value="<%= @the_visit.likes_count %>">
+      </div>
+
+      <button>
+        Update visit
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
