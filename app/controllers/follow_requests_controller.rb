@@ -28,7 +28,7 @@ class FollowRequestsController < ApplicationController
   def my_following
     matching_following = FollowRequest.all.where({ :sender_id => @current_user.id })
     @current_following = matching_following.where({ :status => "accepted" })
-    @pending_following = matching_followers.where({ :status => "pending" })
+    @pending_following = matching_following.where({ :status => "pending" })
     
     render({ :template => "follow_requests/my_following.html.erb" })
   end
