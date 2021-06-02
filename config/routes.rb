@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  get("/", {:controller => "visits", :action => "index" })
 
   # Routes for the Follow request resource:
 
@@ -79,6 +79,7 @@ Rails.application.routes.draw do
   #------------------------------
 
   # Routes for the User account:
+  get("/users", { :controller => "user_authentication", :action => "index" })
 
   # SIGN UP FORM
   get("/user_sign_up", { :controller => "user_authentication", :action => "sign_up_form" })        
