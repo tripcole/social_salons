@@ -10,6 +10,9 @@ class UserAuthenticationController < ApplicationController
   end
 
   def show
+    matching_users = User.all
+    @the_profile = matching_users.where({ :username => params.fetch("path_username") }).at(0)
+    #@profuser = matching_users.where({ :id => params.fetch("id") }).at(0)
     render({ :template => "user_authentication/show.html.erb" })
   end
 
