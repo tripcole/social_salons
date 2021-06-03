@@ -1,7 +1,11 @@
+<% if @the_follower == @current_user %>
 <h1>My Following</h1>
+<% else %>
+<h1> <%= @the_follower.username %>'s Following</h1>
+<% end %>
 
-<% if @pending_following.count != 0 %>
-  <h2>Requests Awaiting Responses</h2>
+<% if @pending_following.count != 0 && @the_follower == @current_user %>
+  <h3>Respond to Your Follow Requests!</h3>
   <table border="1">
       <tr>
         <th>Username</th>
@@ -26,7 +30,7 @@
 <% end %>
 
 <% if @current_following.count != 0 %>
-  <h2>My Following</h2>
+  <h3>Following</h3>
   <table border="1">
       <tr>
         <th>Username</th>

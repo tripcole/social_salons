@@ -81,8 +81,8 @@ Rails.application.routes.draw do
   get("/users/:path_id", { :controller => "user_authentication", :action => "show" })
   get("/users/:path_id/visits", { :controller => "user_authentication", :action => "my_visits" })
   get("/users/:path_id/likes", { :controller => "user_authentication", :action => "my_likes" })
-  get("/users/:path_id/followers", { :controller => "follow_requests", :action => "my_followers" })
-  get("/users/:path_id/following", { :controller => "follow_requests", :action => "my_following" })
+  get("/users/:path_id/followers", { :controller => "follow_requests", :action => "followers" })
+  get("/users/:path_id/following", { :controller => "follow_requests", :action => "following" })
 
   # SIGN UP FORM
   get("/user_sign_up", { :controller => "user_authentication", :action => "sign_up_form" })        

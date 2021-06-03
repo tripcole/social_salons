@@ -1,7 +1,11 @@
+<% if @the_followed == @current_user %>
 <h1>My Followers</h1>
+<% else %>
+<h1> <%= @the_followed.username %>'s Followers</h1>
+<% end %>
 
-<% if @pending_followers.count != 0 %>
-  <h2>Requests Awaiting Confirmation</h2>
+<% if @pending_followers.count != 0 && @the_followed == @current_user %>
+  <h3>Pending Approval</h3>
   <table border="1">
       <tr>
         <th>Username</th>
@@ -18,7 +22,22 @@
         <td><%= a_request.sender.last_name %></td>
         <td><%= time_ago_in_words(a_request.created_at) %> ago</td>
         <td><a href="/users/<%= a_request.sender.id %>">Show details</a></td>
-        <td>TBU</td>
+        <td>
+          <form action="/modify_follow_request/<%= a_request.id %>" method="post">
+            <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
+            <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
+            <input type="hidden" value="accepted" name="query_status">
+          <button>Accept</button>
+          </form>
+          
+          <form action="/modify_follow_request/<%= a_request.id %>" method="post">
+            <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
+            <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
+            <input type="hidden" value="denied" name="query_status">
+          <button>Decline</button>
+          </form>
+
+        </td>
       </tr>
       <% end %>
     <table>
@@ -26,7 +45,7 @@
 <% end %>
 
 <% if @current_followers.count != 0 %>
-  <h2>Followers</h2>
+  <h3>Followers</h3>
   <table border="1">
       <tr>
         <th>Username</th>

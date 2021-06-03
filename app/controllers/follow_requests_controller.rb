@@ -17,20 +17,22 @@ class FollowRequestsController < ApplicationController
     render({ :template => "follow_requests/show.html.erb" })
   end
 
-  def my_followers
-    matching_followers = FollowRequest.all.where({ :recipient_id => @current_user.id })
+  def followers
+    @the_followed = User.where({ :id => params.fetch("path_id")}).at(0)
+    matching_followers = FollowRequest.all.where({ :recipient_id => @the_followed.id })
     @current_followers = matching_followers.where({ :status => "accepted" })
     @pending_followers = matching_followers.where({ :status => "pending" })
 
-    render({ :template => "follow_requests/my_followers.html.erb" })
+    render({ :template => "follow_requests/followers.html.erb" })
   end
 
-  def my_following
-    matching_following = FollowRequest.all.where({ :sender_id => @current_user.id })
+  def following
+    @the_follower = User.where({ :id => params.fetch("path_id")}).at(0)
+    matching_following = FollowRequest.all.where({ :sender_id => @the_follower.id })
     @current_following = matching_following.where({ :status => "accepted" })
     @pending_following = matching_following.where({ :status => "pending" })
     
-    render({ :template => "follow_requests/my_following.html.erb" })
+    render({ :template => "follow_requests/following.html.erb" })
   end
 
   def create
@@ -76,7 +78,7 @@ class FollowRequestsController < ApplicationController
 
     if the_follow_request.valid?
       the_follow_request.save
-      redirect_to("/follow_requests/#{the_follow_request.id}", { :notice => "Follow request updated successfully."} )
+      redirect_to("/follow_requests/#{the_follow_request.id}", { :notice => "Request confirmed!"} )
     else
       redirect_to("/follow_requests/#{the_follow_request.id}", { :alert => "Follow request failed to update successfully." })
     end
@@ -88,6 +90,6 @@ class FollowRequestsController < ApplicationController
 
     the_follow_request.destroy
 
-    redirect_to("/follow_requests", { :notice => "Follow request deleted successfully."} )
+    redirect_to("/follow_requests", { :notice => "Request denied."} )
   end
 end
