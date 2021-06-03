@@ -27,24 +27,25 @@
   <% end %>
 </div>
 
-
-<% if @the_user != @current_user %>
-  <div>Current Status:
+<div>
+<p>
+  <% if @the_user != @current_user %>
     <% follow_request = FollowRequest.where({ :sender_id => @current_user.id, :recipient_id => @the_user.id }).at(0) %>
         <% if follow_request == nil %>
           <form action="/insert_follow_request" method="post">
             <input type="hidden" name="query_recipient_id" value="<%= @the_user.id %>">
-            <button type="button" class="btn btn-outline-success btn-sm">Follow</button>
+            <button class="btn btn-outline-success btn-sm">Follow</button>
           </form>
         <% elsif follow_request.status == "pending" %>
-          Request Sent
-          <a href="/delete_follow_request/<%= follow_request.id %>"><button>Withdraw</button></a>
+          <p>Request Sent
+          <a href="/delete_follow_request/<%= follow_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Withdraw</button></a></p>
         <% elsif follow_request.status == "accepted" %>
-          Following
-          <a href="/delete_follow_request/<%= follow_request.id %>"><button>Unfollow</button></a>
+          <p> Following
+          <a href="/delete_follow_request/<%= follow_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Unfollow</button></a></p>
         <% end %>
-  </div>
-<% end %>
+  <% end %>
+</p>
+</div>
 <hr>
 
 <% if @the_user != @current_user %>

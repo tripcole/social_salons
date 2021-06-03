@@ -20,7 +20,7 @@
         <td><%= a_request.recipient.first_name %></td>
         <td><%= a_request.recipient.last_name %></td>
         <td><%= time_ago_in_words(a_request.created_at) %> ago</td>
-        <td><a href="/delete_follow_request/<%= a_request.id %>"><button>Withdraw</button></a></td>
+        <td><a href="/delete_follow_request/<%= a_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Withdraw</button></a></td>
       </tr>
       <% end %>
     <table>
@@ -43,7 +43,7 @@
         <td><%= a_following.recipient.first_name %></td>
         <td><%= a_following.recipient.last_name %></td>
         <td><%= time_ago_in_words(a_following.created_at) %> ago</td>
-        <td><a href="/delete_follow_request/<%= a_following.id %>"><button>Unfollow</button></a></td>
+        <td><a href="/delete_follow_request/<%= a_following.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Unfollow</button></a></td>
       </tr>
       <% end %>
     <table>
