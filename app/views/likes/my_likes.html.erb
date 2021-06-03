@@ -25,7 +25,7 @@
       <p>Saved on <%= a_like.created_at.strftime('%D') %> </p>
       <a href="/delete_like/<%= a_like.id %>"><button>Remove</button></a>
     </td>
-    <td><a href="visits/<%= a_like.visit.id %>">View details</a></td>
+    <td><a href="/visits/<%= a_like.visit.id %>">View details</a></td>
   </tr>
   <% end %>
 </table>

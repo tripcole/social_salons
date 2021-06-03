@@ -24,7 +24,7 @@ class LikesController < ApplicationController
 
     if the_like.valid?
       the_like.save
-      redirect_to("/visits", { :notice => "Like created successfully." })
+      redirect_back(fallback_location: "/")
     else
       redirect_to("/likes", { :notice => "Like failed to create successfully." })
     end
@@ -39,7 +39,7 @@ class LikesController < ApplicationController
 
     if the_like.valid?
       the_like.save
-      redirect_to("/likes/#{the_like.id}", { :notice => "Like updated successfully."} )
+      redirect_back(fallback_location: "/")
     else
       redirect_to("/likes/#{the_like.id}", { :alert => "Like failed to update successfully." })
     end
@@ -51,6 +51,6 @@ class LikesController < ApplicationController
 
     the_like.destroy
 
-    redirect_to("/likes", { :notice => "Like deleted successfully."} )
+    redirect_back(fallback_location: "/")
   end
 end
