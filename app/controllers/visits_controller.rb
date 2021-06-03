@@ -2,7 +2,7 @@ class VisitsController < ApplicationController
   def index
     matching_visits = Visit.all
 
-    @list_of_visits = matching_visits.order({ :rating => :desc })
+    @list_of_visits = matching_visits.order({ :likes_count => :desc })
 
     render({ :template => "visits/index.html.erb" })
   end
@@ -20,7 +20,7 @@ class VisitsController < ApplicationController
   def create
     the_visit = Visit.new
     the_visit.visit_date = params.fetch("query_visit_date")
-    the_visit.user_id = params.fetch("query_user_id")
+    the_visit.user_id = @current_user.id
     the_visit.salon_id = params.fetch("query_salon_id")
     the_visit.rating = params.fetch("query_rating")
     the_visit.comment = params.fetch("query_comment")
