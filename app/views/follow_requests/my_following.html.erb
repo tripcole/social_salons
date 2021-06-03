@@ -1,25 +1,43 @@
 <h1>My Following</h1>
 
 <% if @pending_following.count != 0 %>
-  <h2>Requests Awaiting Response</h2>
-  <% @pending_following.each do |a_request| %>
-    <table>
+  <h2>Requests Awaiting Responses</h2>
+  <table border="1">
       <tr>
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Date Sent</th>
       </tr>
+      <% @pending_following.each do |a_request| %>
       <tr>
-        <td><%= a_request.id %></td>
-        <td><%= a_request.id %></td>
-        <td><%= a_request.id %></td>
-        <td><%= a_request.created_at %></td>
+        <td><%= a_request.sender.username %></td>
+        <td><%= a_request.sender.first_name %></td>
+        <td><%= a_request.sender.last_name %></td>
+        <td><%= time_ago_in_words(a_request.created_at) %> ago</td>
       </tr>
+      <% end %>
     <table>
-  <% end %>
 <% else %>
 <% end %>
 
-<h2>Following</h2>
-<%= @current_following %>
+<% if @current_following.count != 0 %>
+  <h2>My Following</h2>
+  <table border="1">
+      <tr>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Date Sent</th>
+      </tr>
+      <% @current_following.each do |a_following| %>
+      <tr>
+        <td><%= a_following.sender.username %></td>
+        <td><%= a_following.sender.first_name %></td>
+        <td><%= a_following.sender.last_name %></td>
+        <td><%= time_ago_in_words(a_following.created_at) %> ago</td>
+      </tr>
+      <% end %>
+    <table>
+<% else %>
+<% end %>
