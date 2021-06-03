@@ -92,6 +92,7 @@ class FollowRequestsController < ApplicationController
 
     the_follow_request.destroy
 
-    redirect_to("/follow_requests", { :notice => "Request denied."} )
+    # redirect_to("/follow_requests", { :notice => "Request denied."} )
+    redirect_back(fallback_location: "/")
   end
 end
