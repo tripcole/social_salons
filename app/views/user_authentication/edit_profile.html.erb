@@ -3,8 +3,8 @@
 
   <div>First Name: <%= @current_user.first_name %></div>
   <div>Last Name: <%= @current_user.last_name %></div>
-  <div>Followers: <%= @my_followers.count %> </div>
-  <div>Following: <%= @my_following.count %> </div>
+  <div>Followers: <%= @my_followers.count %> <a href="/users/<%= @current_user.id %>/followers">See All</a></div>
+  <div>Following: <%= @my_following.count %> <a href="/users/<%= @current_user.id %>/following">See All</a></div>
 
   <hr>
   <h5>
