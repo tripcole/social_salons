@@ -24,7 +24,7 @@ class LikesController < ApplicationController
 
     if the_like.valid?
       the_like.save
-      redirect_to("/my_likes", { :notice => "Like created successfully." })
+      redirect_to("/users/#{@current_user.id}/likes", { :notice => "Like created successfully." })
     else
       redirect_to("/likes", { :notice => "Like failed to create successfully." })
     end
