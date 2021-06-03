@@ -28,12 +28,7 @@
           <button>Accept</button>
           </form>
           
-          <form action="/modify_follow_request/<%= a_request.id %>" method="post">
-            <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
-            <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
-            <input type="hidden" value="declined" name="query_status">
-          <button>Decline</button>
-          </form>
+          <a href="/delete_follow_request/<%= a_request.id %>"><button>Decline</button></a>
         </td>
       </tr>
       <% end %>
@@ -57,13 +52,7 @@
         <td><%= a_follower.sender.first_name %></td>
         <td><%= a_follower.sender.last_name %></td>
         <td><%= time_ago_in_words(a_follower.created_at) %> ago</td>
-        <td>
-          <form action="/modify_follow_request/<%= a_follower.id %>" method="post">
-            <input type="hidden" value="<%= a_follower.sender_id %>" name="query_sender_id">
-            <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
-            <input type="hidden" value="removed" name="query_status">
-          <button>Remove Follower</button>
-        </td>
+        <td><a href="/delete_follow_request/<%= a_follower.id %>"><button>Remove Follower</button></a></td>
       </tr>
       <% end %>
     <table>
