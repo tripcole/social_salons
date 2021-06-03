@@ -40,7 +40,7 @@
           </form>
         <% elsif follow_request.status == "pending" %>
           Request Sent
-          <a href="/delete_follow_request/<%= follow_request.id %>"><button>Withdraw Request</button></a>
+          <a href="/delete_follow_request/<%= follow_request.id %>"><button>Withdraw</button></a>
         <% elsif follow_request.status == "accepted" %>
           Following
           <a href="/delete_follow_request/<%= follow_request.id %>"><button>Unfollow</button></a>
