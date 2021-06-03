@@ -1,4 +1,4 @@
-<div >
+<div>
   <h1> My Profile </h1>
 
   <div>First Name: <%= @current_user.first_name %></div>
@@ -6,11 +6,11 @@
   <div>
   Followers: <%= @my_followers.count %> 
   <% if  @my_followers.count != 0 && @my_pending_followers.count != 0 %>
-    <a href="/users/<%= @current_user.id %>/followers">See All</a> <button>Pending</button>
+    <a href="/users/<%= @current_user.id %>/followers">See All</a> <span class="badge badge-secondary">New</span>
   <% elsif  @my_followers.count != 0 %>
     <a href="/users/<%= @current_user.id %>/followers">See All</a>
   <% elsif @my_pending_followers.count != 0 %>
-    <a href="/users/<%= @current_user.id %>/followers">See All</a> <button>Pending</button>
+    <a href="/users/<%= @current_user.id %>/followers">See All</a> <span class="badge badge-secondary">New</span>
   <% else %>
   <% end %>
 </div>

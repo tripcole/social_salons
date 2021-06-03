@@ -25,10 +25,9 @@
             <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
             <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
             <input type="hidden" value="accepted" name="query_status">
-          <button>Accept</button>
-          </form>
+          </form><button type="button" class="btn btn-outline-success btn-sm">Accept</button>
           
-          <a href="/delete_follow_request/<%= a_request.id %>"><button>Decline</button></a>
+          <a href="/delete_follow_request/<%= a_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Decline</button></a>
         </td>
       </tr>
       <% end %>

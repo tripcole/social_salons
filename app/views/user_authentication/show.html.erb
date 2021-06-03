@@ -34,9 +34,7 @@
         <% if follow_request == nil %>
           <form action="/insert_follow_request" method="post">
             <input type="hidden" name="query_recipient_id" value="<%= @the_user.id %>">
-            <button>
-              Follow
-            </button>
+            <button type="button" class="btn btn-outline-success btn-sm">Follow</button>
           </form>
         <% elsif follow_request.status == "pending" %>
           Request Sent
