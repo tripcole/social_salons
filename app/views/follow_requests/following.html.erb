@@ -5,24 +5,29 @@
 <% end %>
 
 <% if @pending_following.count != 0 && @the_follower == @current_user %>
-  <h3>Respond to Your Follow Requests!</h3>
+  <h3>Pending Requests</h3>
   <table border="1">
       <tr>
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Date Sent</th>
-        <th></th>
-        <th>Response</th>
+        <th>Request Sent</th>
+        <th>Modify</th>
       </tr>
       <% @pending_following.each do |a_request| %>
       <tr>
-        <td><%= a_request.recipient.username %></td>
+        <td><a href="/users/<%= a_request.recipient.id %>"><%= a_request.recipient.username %></a></td>
         <td><%= a_request.recipient.first_name %></td>
         <td><%= a_request.recipient.last_name %></td>
         <td><%= time_ago_in_words(a_request.created_at) %> ago</td>
-        <td><a href="/users/<%= a_request.recipient.id %>">Show details</a></td>
-        <td>TBU</td>
+        <td>
+          <form action="/modify_follow_request/<%= a_request.id %>" method="post">
+            <input type="hidden" value="<%= @current_user.id %>" name="query_sender_id">
+            <input type="hidden" value="<%= a_request.recipient.id %>" name="query_recipient_id">
+            <input type="hidden" value="withdrawn" name="query_status">
+          <button>Withdraw Request</button>
+          </form>
+        </td>
       </tr>
       <% end %>
     <table>
@@ -36,16 +41,22 @@
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Date Sent</th>
-        <th></th>
+        <th>Following Since</th>
+        <th>Modify</th>
       </tr>
       <% @current_following.each do |a_following| %>
       <tr>
-        <td><%= a_following.recipient.username %></td>
+        <td><a href="/users/<%= a_following.recipient.id %>"><%= a_following.recipient.username %></a></td>
         <td><%= a_following.recipient.first_name %></td>
         <td><%= a_following.recipient.last_name %></td>
         <td><%= time_ago_in_words(a_following.created_at) %> ago</td>
-        <td><a href="/users/<%= a_following.recipient.id %>">Show details</a></td>
+        <td>
+          <form action="/modify_follow_request/<%= a_following.id %>" method="post">
+            <input type="hidden" value="<%= @current_user.id %>" name="query_sender_id">
+            <input type="hidden" value="<%= a_following.recipient.id %>" name="query_recipient_id">
+            <input type="hidden" value="unfollowed" name="query_status">
+          <button>Unfollow</button>
+        </td>
       </tr>
       <% end %>
     <table>

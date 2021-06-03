@@ -7,8 +7,25 @@
 
 <div>First Name: <%= @the_user.first_name %></div>
 <div>Last Name: <%= @the_user.last_name %></div>
-<div>Followers: <%= @user_followers.count %> <a href="/users/<%= @the_user.id %>/followers">See All</a></div>
-<div>Following: <%= @user_following.count %> <a href="/users/<%= @the_user.id %>/following">See All</a></div>
+<div>
+  Followers: <%= @user_followers.count %> 
+  <% if  @user_followers.count != 0 %>
+    <a href="/users/<%= @the_user.id %>/followers">See All</a>
+  <% elsif @user_pending_followers.count != 0 && @the_user == @current_user %>
+    <a href="/users/<%= @the_user.id %>/followers">See All</a>
+  <% else %>
+  <% end %>
+</div>
+
+<div>
+  Following: <%= @user_following.count %> 
+  <% if  @user_following.count != 0 %>
+    <a href="/users/<%= @the_user.id %>/following">See All</a>
+  <% elsif @user_pending_following.count != 0 && @the_user == @current_user %>
+    <a href="/users/<%= @the_user.id %>/following">See All</a>
+  <% else %>
+  <% end %>
+</div>
 
 
 <% if @the_user != @current_user %>
@@ -22,11 +39,11 @@
             </button>
           </form>
         <% elsif follow_request.status == "pending" %>
-          Follow Request Sent.
-          <a href="/delete_follow_request/<%= follow_request.id %>">Cancel</a>
+          Request Sent
+          <a href="/delete_follow_request/<%= follow_request.id %>"><button>Withdraw Request</button></a>
         <% elsif follow_request.status == "accepted" %>
-          Following.
-          <a href="/delete_follow_request/<%= follow_request.id %>">Unfollow</a>
+          Following
+          <a href="/delete_follow_request/<%= follow_request.id %>"><button>Unfollow</button></a>
         <% end %>
   </div>
 <% end %>

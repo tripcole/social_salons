@@ -3,8 +3,26 @@
 
   <div>First Name: <%= @current_user.first_name %></div>
   <div>Last Name: <%= @current_user.last_name %></div>
-  <div>Followers: <%= @my_followers.count %> <a href="/users/<%= @current_user.id %>/followers">See All</a></div>
-  <div>Following: <%= @my_following.count %> <a href="/users/<%= @current_user.id %>/following">See All</a></div>
+  <div>
+  Followers: <%= @my_followers.count %> 
+  <% if  @my_followers.count != 0 %>
+    <a href="/users/<%= @current_user.id %>/followers">See All</a>
+  <% elsif @my_pending_followers.count != 0 %>
+    <a href="/users/<%= @current_user.id %>/followers">See All</a> <button>Pending</button>
+  <% else %>
+  <% end %>
+</div>
+
+<div>
+  Following: <%= @my_following.count %> 
+  <% if  @my_following.count != 0 %>
+    <a href="/users/<%= @current_user.id %>/following">See All</a>
+  <% elsif @my_pending_following.count != 0 %>
+    <a href="/users/<%= @current_user.id %>/following">See All</a> <button>Pending</button>
+  <% else %>
+  <% end %>
+</div>
+
 
   <hr>
   <h5>

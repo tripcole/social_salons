@@ -29,9 +29,11 @@ class UserAuthenticationController < ApplicationController
     
     matching_followers = FollowRequest.all.where({ :recipient_id => @the_user.id })
     @user_followers = matching_followers.where({ :status => "accepted" })
+    @user_pending_followers = matching_followers.where({ :status => "pending" })
 
     matching_following = FollowRequest.all.where({ :sender_id => @the_user.id })
     @user_following = matching_following.where({ :status => "accepted" })
+    @user_pending_following = matching_followers.where({ :status => "pending" })
 
 
     render({ :template => "user_authentication/show.html.erb" })
@@ -106,9 +108,11 @@ class UserAuthenticationController < ApplicationController
   def edit_profile_form
     matching_followers = FollowRequest.all.where({ :recipient_id => @current_user.id })
     @my_followers = matching_followers.where({ :status => "accepted" })
+    @my_pending_followers = matching_followers.where({ :status => "pending" })
 
     matching_following = FollowRequest.all.where({ :sender_id => @current_user.id })
     @my_following = matching_following.where({ :status => "accepted" })
+    @my_pending_following = matching_followers.where({ :status => "pending" })
     
     render({ :template => "user_authentication/edit_profile.html.erb" })
   end

@@ -5,23 +5,21 @@
 <% end %>
 
 <% if @pending_followers.count != 0 && @the_followed == @current_user %>
-  <h3>Pending Approval</h3>
+  <h3>Respond to Your Follow Requests!</h3>
   <table border="1">
       <tr>
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Date Sent</th>
-        <th></th>
-        <th>Response</th>
+        <th>Received</th>
+        <th>Respond</th>
       </tr>
       <% @pending_followers.each do |a_request| %>
       <tr>
-        <td><%= a_request.sender.username %></td>
+        <td><a href="/users/<%= a_request.sender.id %>"><%= a_request.sender.username %></a></td>
         <td><%= a_request.sender.first_name %></td>
         <td><%= a_request.sender.last_name %></td>
         <td><%= time_ago_in_words(a_request.created_at) %> ago</td>
-        <td><a href="/users/<%= a_request.sender.id %>">Show details</a></td>
         <td>
           <form action="/modify_follow_request/<%= a_request.id %>" method="post">
             <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
@@ -33,10 +31,9 @@
           <form action="/modify_follow_request/<%= a_request.id %>" method="post">
             <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
             <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
-            <input type="hidden" value="denied" name="query_status">
+            <input type="hidden" value="declined" name="query_status">
           <button>Decline</button>
           </form>
-
         </td>
       </tr>
       <% end %>
@@ -51,16 +48,22 @@
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
-        <th>Date Sent</th>
-        <th></th>
+        <th>Follower Since</th>
+        <th>Modify</th>
       </tr>
       <% @current_followers.each do |a_follower| %>
       <tr>
-        <td><%= a_follower.sender.username %></td>
+        <td><a href="/users/<%= a_follower.sender.id %>"><%= a_follower.sender.username %></a></td>
         <td><%= a_follower.sender.first_name %></td>
         <td><%= a_follower.sender.last_name %></td>
         <td><%= time_ago_in_words(a_follower.created_at) %> ago</td>
-        <td><a href="/users/<%= a_follower.sender.id %>">Show details</a></td>
+        <td>
+          <form action="/modify_follow_request/<%= a_follower.id %>" method="post">
+            <input type="hidden" value="<%= a_follower.sender_id %>" name="query_sender_id">
+            <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
+            <input type="hidden" value="removed" name="query_status">
+          <button>Remove Follower</button>
+        </td>
       </tr>
       <% end %>
     <table>
