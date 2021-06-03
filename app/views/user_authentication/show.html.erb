@@ -1,5 +1,8 @@
-<h1> User Profile </h1>
-<h2> <%= @the_user.username %>'s Information </h2>
+<% if @the_user != @current_user %>
+  <h1> <%= @the_user.username %>'s Profile </h1>
+<% else %>
+  <h1> My Profile </h1>
+<% end %>
 
 
 <div>First Name: <%= @the_user.first_name %></div>
@@ -8,8 +11,8 @@
 <div>Following: <%= @user_following.count %> </div>
 
 
-<div>Current Status:
-  <% if @user != @current_user %>
+<% if @the_user != @current_user %>
+  <div>Current Status:
     <% follow_request = FollowRequest.where({ :sender_id => @current_user.id, :recipient_id => @the_user.id }).at(0) %>
         <% if follow_request == nil %>
           <form action="/insert_follow_request" method="post">
@@ -25,11 +28,15 @@
           Following.
           <a href="/delete_follow_request/<%= follow_request.id %>">Unfollow</a>
         <% end %>
-    <% end %>
   </div>
+<% end %>
 <hr>
 
-<h2><%= @the_user.username%>'s Recent Visits</h2>
+<% if @the_user != @current_user %>
+  <h2> <%= @the_user.username %>'s Recent Visits </h2>
+<% else %>
+  <h2> My Recent Visits </h2>
+<% end %>
 
 <table border="1">
   <tr>

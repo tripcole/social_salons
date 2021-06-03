@@ -1,4 +1,12 @@
 <div >
+  <h1> My Profile </h1>
+
+  <div>First Name: <%= @current_user.first_name %></div>
+  <div>Last Name: <%= @current_user.last_name %></div>
+  <div>Followers: <%= @my_followers.count %> </div>
+  <div>Following: <%= @my_following.count %> </div>
+
+  <hr>
   <h5>
     Edit User Account
   </h5>

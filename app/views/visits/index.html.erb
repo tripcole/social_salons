@@ -10,7 +10,10 @@
     <th>Comments</th>
     <th>Image</th>
     <th>Number of Likes</th>
-    <th>Save this Idea!</th>
+    <% if @current_user != nil %>
+      <th>Save this Idea!</th>
+    <% else %>
+    <% end %>
     <th></th>
   </tr>
   <% @list_of_visits.each do |a_visit| %>
@@ -21,6 +24,7 @@
     <td><%= a_visit.comment %></td>
     <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
     <td><%= a_visit.likes_count %></td>
+    <% if @current_user != nil %>
     <td>
       <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
       <% if like == nil %>
@@ -33,6 +37,8 @@
         <a href="/delete_like/<%= like.id %>"><button>Remove</button></a>
       <% end %>
     </td>
+    <% else %>
+    <% end %>
     <td><a href="visits/<%= a_visit.id %>">View details</a></td>
   <tr>
   <% end %>

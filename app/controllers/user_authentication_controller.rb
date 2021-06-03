@@ -104,6 +104,12 @@ class UserAuthenticationController < ApplicationController
   end
     
   def edit_profile_form
+    matching_followers = FollowRequest.all.where({ :recipient_id => @current_user.id })
+    @my_followers = matching_followers.where({ :status => "accepted" })
+
+    matching_following = FollowRequest.all.where({ :sender_id => @current_user.id })
+    @my_following = matching_following.where({ :status => "accepted" })
+    
     render({ :template => "user_authentication/edit_profile.html.erb" })
   end
 
