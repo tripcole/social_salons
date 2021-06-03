@@ -3,23 +3,48 @@
   <head>
     <title>FinalProject</title>
     <%= csrf_meta_tags %>
-
-    <!-- Expand the number of characters we can use in the document beyond basic ASCII 🎉 -->
-    <meta charset="utf-8">
-
-    <!-- Make it responsive to small screens -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= csp_meta_tag %>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    GOOGLE FONTS
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Sigmar+One&display=swap" rel="stylesheet">
+    
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csp_meta_tag %>
 
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">SocialSalons</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/visits">Discover<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/salons">Salons<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/users/<%=@current_user.id%>/visits">My Past Visits<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/users/<%=@current_user.id%>/likes">My Saved Ideas<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/users/<%=@current_user.id%>/newsfeed">My Newsfeed<span class="sr-only">(current)</span></a>
+          </li>
+      </div>
+    </nav>
+
     <ul>
       <li><a href="/users">All users</a></li>
       <li><a href="/salons">All salons</a></li>

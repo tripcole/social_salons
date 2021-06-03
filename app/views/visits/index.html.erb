@@ -2,48 +2,97 @@
   <h1>Browse Visits for New Ideas</h1>
 </div>
 
-<table border="1">
-  <tr>
-    <th>Visit Date</th>
-    <th>Salon Name</th>
-    <th>Rating</th>
-    <th>Comments</th>
-    <th>Image</th>
-    <th>Number of Likes</th>
-    <% if @current_user != nil %>
-      <th>Save this Idea!</th>
-    <% else %>
-    <% end %>
-    <th></th>
-  </tr>
-  <% @list_of_visits.each do |a_visit| %>
-  <tr>
-    <td><%= a_visit.visit_date.strftime('%D') %></td>
-    <td><%= a_visit.salon.name %></td>
-    <td><%= a_visit.rating %></td>
-    <td><%= a_visit.comment %></td>
-    <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
-    <td><%= a_visit.likes_count %></td>
-    <% if @current_user != nil %>
-    <td>
-      <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
-      <% if like == nil %>
-      <form action="/insert_like" method="post">
-        <input type="hidden" value="<%= a_visit.id %>" name="query_visit_id">
-        <button>Like</button>
-      </form>
+<div class="row row-cols-4">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Visit Date</th>
+      <th scope="col">Salon Name</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Comments</th>
+      <th scope="col">Image</th>
+      <th scope="col">Number of Likes</th>
+      <% if @current_user != nil %>
+        <th scope="col">Save this Idea!</th>
       <% else %>
-        <p>Saved for Later!</p>
-        <a href="/delete_like/<%= like.id %>"><button>Remove</button></a>
       <% end %>
-    </td>
-    <% else %>
-    <% end %>
-    <td><a href="visits/<%= a_visit.id %>">View details</a></td>
-  <tr>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <% @list_of_visits.each do |a_visit| %>
+  <tbody>
+    <tr>
+      <td><%= a_visit.visit_date.strftime('%D') %></td>
+      <td><%= a_visit.salon.name %></td>
+      <td><%= a_visit.rating %></td>
+      <td><%= a_visit.comment %></td>
+      <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
+      <td><%= a_visit.likes_count %></td>
+      <% if @current_user != nil %>
+      <td>
+        <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
+        <% if like == nil %>
+        <form action="/insert_like" method="post">
+          <input type="hidden" value="<%= a_visit.id %>" name="query_visit_id">
+          <button>Like</button>
+        </form>
+        <% else %>
+          <p>Saved for Later!</p>
+          <a href="/delete_like/<%= like.id %>"><button>Remove</button></a>
+        <% end %>
+      </td>
+      <% else %>
+      <% end %>
+      <td><a href="visits/<%= a_visit.id %>">View Details</a></td>
+    </tr>
+  </tbody>
   <% end %>
 </table>
+</div>
 
+<div class="container-fluid">
+  <table border="1">
+    <tr>
+      <th>Visit Date</th>
+      <th>Salon Name</th>
+      <th>Rating</th>
+      <th>Comments</th>
+      <th>Image</th>
+      <th>Number of Likes</th>
+      <% if @current_user != nil %>
+        <th>Save this Idea!</th>
+      <% else %>
+      <% end %>
+      <th></th>
+    </tr>
+    <% @list_of_visits.each do |a_visit| %>
+    <tr>
+      <td><%= a_visit.visit_date.strftime('%D') %></td>
+      <td><%= a_visit.salon.name %></td>
+      <td><%= a_visit.rating %></td>
+      <td><%= a_visit.comment %></td>
+      <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
+      <td><%= a_visit.likes_count %></td>
+      <% if @current_user != nil %>
+      <td>
+        <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
+        <% if like == nil %>
+        <form action="/insert_like" method="post">
+          <input type="hidden" value="<%= a_visit.id %>" name="query_visit_id">
+          <button>Like</button>
+        </form>
+        <% else %>
+          <p>Saved for Later!</p>
+          <a href="/delete_like/<%= like.id %>"><button>Remove</button></a>
+        <% end %>
+      </td>
+      <% else %>
+      <% end %>
+      <td><a href="visits/<%= a_visit.id %>">View Details</a></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
 
 
 <div>

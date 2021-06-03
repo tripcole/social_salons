@@ -51,6 +51,16 @@ class UserAuthenticationController < ApplicationController
     render({ :template => "likes/my_likes.html.erb"})
   end
 
+  # def newsfeed
+  #   matching_visits = Visit.all
+  #   @list_of_following_visits = matching_visits.at(0)
+
+  #   # @list_of_following_visits 
+  #   # = following_visits.order({ :likes_count => :desc })
+
+  #   render({ :template => "visits/following_visits.html.erb" })
+  # end
+
   def sign_in_form
     render({ :template => "user_authentication/sign_in.html.erb" })
   end
@@ -140,6 +150,16 @@ class UserAuthenticationController < ApplicationController
     reset_session
     
     redirect_to("/", { :notice => "User account cancelled" })
+  end
+  
+  def newsfeed
+    matching_following = FollowRequest.all.where({ :sender_id => @current_user.id })
+    @my_following = matching_following.where({ :status => "accepted" })
+
+    # matching_visits = Visit.all
+    # @list_of_following_visits = matching_visits.at(0)
+
+    render({ :template => "visits/newsfeed.html.erb" })
   end
  
 end
