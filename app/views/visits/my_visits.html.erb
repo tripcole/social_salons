@@ -2,6 +2,38 @@
   <h1 class="my-new-font-head">My Past Visits</h1>
 </div>
 
+<div class="my-new-font-body" style="justify-content: space-between; display:flex">
+  <form action="/insert_visit" method="post">
+      <label for="visit_date_box">Visit Date</label>
+      <input type="date" id="visit_date_box" name="query_visit_date">
+    
+      <label for="salon_id_box">Salon</label>
+      <select id="salon_id_box" name="query_salon_id">
+        <% matching_salons = Salon.all.order(:name) %>
+        <% matching_salons.each do |a_salon| %>
+        <option value="<%= a_salon.id %>" selected="true"> <%= a_salon.name %> </option>
+        <% end %>
+      </select>
+
+      <label for="comment_box">Comment</label>
+      <input type="text" id="comment_box" name="query_comment" placeholder="Record visit notes and make suggestions!">
+    
+      <label for="image_box">Image</label>
+      <input type="text" id="image_box" name="query_image">
+
+      <label for="rating_box">Rating</label>
+      <select id="rating_box" name="query_rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    
+    <button class="btn btn-secondary btn-width-lg my-new-font-body">Log Visit</button> 
+  </form>
+</div>
+
 <div class="my-new-font-body">
 <table class="table">
   <thead class="thead-dark">
