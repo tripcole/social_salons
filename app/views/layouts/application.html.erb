@@ -15,6 +15,10 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     
     <style>
+     {
+      border:thin red dashed;
+      box-sizing: border-box
+    }
     .my-new-font-head {
       font-family: 'Roboto Condensed', sans-serif;
       color: midnightblue; 
@@ -33,21 +37,21 @@
     }
 
     .visit-card {
-      font-family: 'Cabin', sans-serif;
-      font-family: 'Roboto Condensed', sans-serif;
-      padding: 5px;
+      padding: 0px;
+      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 550px 550px 550px 550px;
     }
 
     .one-eighth {
       width: 12.5%;
       text-align: center;
-      border: thin red solid;
     }
 
     .one-fifth {
       width: 20.0%;
       text-align: center;
-      border: thin red solid;
     }
 
     .btn-width-sm {
