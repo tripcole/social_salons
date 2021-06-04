@@ -8,6 +8,7 @@
 #  last_name       :string
 #  password_digest :string
 #  username        :string
+#  website         :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #

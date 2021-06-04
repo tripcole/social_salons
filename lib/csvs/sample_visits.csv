@@ -1,11 +1,200 @@
-﻿id,visit_date,user_id,salon_id,rating,comment
-1,6/2/2021,1,15,4,I got blue
-2,6/2/2021,2,15,4,I got green
-3,6/2/2021,3,15,3,I got pink
-4,6/2/2021,4,15,4,I got pink
-5,6/2/2021,5,15,5,I got pink
-6,6/2/2021,6,16,2,I got a #2 fade
-7,6/2/2021,7,17,5,I got a #2 fade
-8,6/2/2021,8,18,6,I got a scissor cut
-9,6/2/2021,9,19,4,I got a scissor cut
-10,6/2/2021,10,20,3,I got a #2 on sides and #8 on top
+﻿id,visit_date,user_id,salon_id,rating,comment,image,likes_count
+65,2021-04-27,112,61,4,Very good - I want to remember this one,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+67,2021-04-27,107,60,4,Very good - I want to remember this one,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+186,2021-04-27,91,57,1,Awful experience! Definitiely do not go here,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+158,2021-04-26,90,65,1,Awful experience! Definitiely do not go here,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+33,2021-04-27,83,51,5,They were amazing! Best visit I've had in years,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+137,2021-04-27,82,51,2,"Probably wouldn't go back. Super friendly, but not great",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+176,2021-05-29,54,53,1,Awful experience! Definitiely do not go here,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+60,2021-04-13,51,61,4,Very good - I want to remember this one,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+138,2021-04-27,42,54,2,"Probably wouldn't go back. Super friendly, but not great",https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+71,2021-04-27,26,59,4,Very good - I want to remember this one,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+99,2021-04-27,17,63,3,"Not bad, but didn't love what I went with this time",https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+34,2021-04-27,13,56,5,They were amazing! Best visit I've had in years,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+180,2021-04-27,100,57,1,Awful experience! Definitiely do not go here,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+54,2021-04-13,90,55,4,Very good - I want to remember this one,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+171,2021-05-31,67,56,1,Awful experience! Definitiely do not go here,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+108,2021-05-17,63,54,2,"Probably wouldn't go back. Super friendly, but not great",https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+88,2021-05-29,61,59,3,"Not bad, but didn't love what I went with this time","https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+112,2021-05-17,59,51,2,"Probably wouldn't go back. Super friendly, but not great","https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+66,2021-04-27,55,58,4,Very good - I want to remember this one,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+89,2021-05-29,52,54,3,"Not bad, but didn't love what I went with this time",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+14,2021-05-31,48,63,5,They were amazing! Best visit I've had in years,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+135,2021-04-27,39,61,2,"Probably wouldn't go back. Super friendly, but not great",https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+133,2021-04-13,31,62,2,"Probably wouldn't go back. Super friendly, but not great",https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+124,2021-05-31,21,52,2,"Probably wouldn't go back. Super friendly, but not great","https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+109,2021-05-17,112,59,2,"Probably wouldn't go back. Super friendly, but not great",https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+24,2021-04-13,112,62,5,They were amazing! Best visit I've had in years,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+80,2021-05-17,108,53,3,"Not bad, but didn't love what I went with this time",https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+113,2021-05-17,80,60,2,"Probably wouldn't go back. Super friendly, but not great",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+114,2021-04-26,80,51,2,"Probably wouldn't go back. Super friendly, but not great",https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+97,2021-04-27,78,64,3,"Not bad, but didn't love what I went with this time",https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+151,2021-04-27,72,65,2,"Probably wouldn't go back. Super friendly, but not great",https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+93,2021-04-27,66,52,3,"Not bad, but didn't love what I went with this time",https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+11,2021-06-02,51,56,5,They were amazing! Best visit I've had in years,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+72,2021-04-27,36,56,4,Very good - I want to remember this one,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+70,2021-04-27,27,59,4,Very good - I want to remember this one,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+64,2021-04-27,17,60,4,Very good - I want to remember this one,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+173,2021-05-29,112,54,1,Awful experience! Definitiely do not go here,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+161,2021-06-02,107,62,1,Awful experience! Definitiely do not go here,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+50,2021-05-29,102,59,4,Very good - I want to remember this one,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+134,2021-04-13,102,63,2,"Probably wouldn't go back. Super friendly, but not great","https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+148,2021-04-27,98,58,2,"Probably wouldn't go back. Super friendly, but not great","https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+22,2021-04-13,90,60,5,They were amazing! Best visit I've had in years,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+149,2021-04-27,90,56,2,"Probably wouldn't go back. Super friendly, but not great",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+102,2021-04-27,89,54,3,"Not bad, but didn't love what I went with this time",https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+119,2021-04-26,67,58,2,"Probably wouldn't go back. Super friendly, but not great",https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+42,2021-06-02,66,65,4,Very good - I want to remember this one,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+91,2021-05-29,49,58,3,"Not bad, but didn't love what I went with this time",https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+56,2021-04-13,32,52,4,Very good - I want to remember this one,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+154,2021-05-17,17,59,1,Awful experience! Definitiely do not go here,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+132,2021-04-13,112,52,2,"Probably wouldn't go back. Super friendly, but not great",https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+31,2021-04-27,109,59,5,They were amazing! Best visit I've had in years,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+195,2021-04-27,107,57,1,Awful experience! Definitiely do not go here,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+45,2021-05-31,101,65,4,Very good - I want to remember this one,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+76,2021-05-17,96,63,3,"Not bad, but didn't love what I went with this time","https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+126,2021-05-29,93,55,2,"Probably wouldn't go back. Super friendly, but not great",https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+83,2021-04-26,91,53,3,"Not bad, but didn't love what I went with this time",https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+117,2021-04-26,86,55,2,"Probably wouldn't go back. Super friendly, but not great",https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+7,2021-04-26,73,61,5,They were amazing! Best visit I've had in years,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+78,2021-05-17,62,65,3,"Not bad, but didn't love what I went with this time",https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+12,2021-05-31,54,51,5,They were amazing! Best visit I've had in years,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+21,2021-04-13,52,55,5,They were amazing! Best visit I've had in years,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+3,2021-05-17,38,65,5,They were amazing! Best visit I've had in years,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+144,2021-04-27,21,56,2,"Probably wouldn't go back. Super friendly, but not great",https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+163,2021-06-02,21,57,1,Awful experience! Definitiely do not go here,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+13,2021-05-31,15,63,5,They were amazing! Best visit I've had in years,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+164,2021-06-02,95,56,1,Awful experience! Definitiely do not go here,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+145,2021-04-27,91,57,2,"Probably wouldn't go back. Super friendly, but not great",https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+28,2021-04-27,88,55,5,They were amazing! Best visit I've had in years,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+179,2021-04-13,80,59,1,Awful experience! Definitiely do not go here,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+131,2021-05-29,70,53,2,"Probably wouldn't go back. Super friendly, but not great",https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+183,2021-04-27,69,56,1,Awful experience! Definitiely do not go here,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+68,2021-04-27,65,52,4,Very good - I want to remember this one,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+198,2021-04-27,65,59,1,Awful experience! Definitiely do not go here,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+150,2021-04-27,64,64,2,"Probably wouldn't go back. Super friendly, but not great",https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+116,2021-04-26,63,53,2,"Probably wouldn't go back. Super friendly, but not great",https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+146,2021-04-27,33,56,2,"Probably wouldn't go back. Super friendly, but not great","https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+128,2021-05-29,30,59,2,"Probably wouldn't go back. Super friendly, but not great",https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+84,2021-04-26,23,62,3,"Not bad, but didn't love what I went with this time",https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+23,2021-04-13,19,61,5,They were amazing! Best visit I've had in years,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+27,2021-04-27,112,62,5,They were amazing! Best visit I've had in years,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+189,2021-04-27,106,59,1,Awful experience! Definitiely do not go here,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+125,2021-05-31,105,63,2,"Probably wouldn't go back. Super friendly, but not great",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+81,2021-04-26,91,59,3,"Not bad, but didn't love what I went with this time",https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+120,2021-06-02,91,57,2,"Probably wouldn't go back. Super friendly, but not great",https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+16,2021-05-31,78,51,5,They were amazing! Best visit I've had in years,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+44,2021-05-31,63,58,4,Very good - I want to remember this one,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+32,2021-04-27,62,64,5,They were amazing! Best visit I've had in years,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+58,2021-04-13,62,55,4,Very good - I want to remember this one,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+38,2021-05-17,45,61,4,Very good - I want to remember this one,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+141,2021-04-27,40,58,2,"Probably wouldn't go back. Super friendly, but not great",https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+92,2021-04-27,24,54,3,"Not bad, but didn't love what I went with this time",https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+147,2021-04-27,111,65,2,"Probably wouldn't go back. Super friendly, but not great",https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+157,2021-04-26,106,53,1,Awful experience! Definitiely do not go here,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+172,2021-05-29,97,55,1,Awful experience! Definitiely do not go here,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+62,2021-04-13,77,64,4,Very good - I want to remember this one,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+121,2021-06-02,77,64,2,"Probably wouldn't go back. Super friendly, but not great",https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+74,2021-04-27,74,60,4,Very good - I want to remember this one,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+175,2021-05-29,70,51,1,Awful experience! Definitiely do not go here,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+40,2021-04-26,60,51,4,Very good - I want to remember this one,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+5,2021-05-17,51,58,5,They were amazing! Best visit I've had in years,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+87,2021-05-31,45,60,3,"Not bad, but didn't love what I went with this time",https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+96,2021-04-27,44,54,3,"Not bad, but didn't love what I went with this time",https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+47,2021-05-31,30,53,4,Very good - I want to remember this one,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+123,2021-05-31,23,54,2,"Probably wouldn't go back. Super friendly, but not great",https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+8,2021-04-26,20,64,5,They were amazing! Best visit I've had in years,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+193,2021-04-27,19,60,1,Awful experience! Definitiely do not go here,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+39,2021-04-26,105,60,4,Very good - I want to remember this one,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+166,2021-05-31,100,56,1,Awful experience! Definitiely do not go here,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+9,2021-04-26,98,55,5,They were amazing! Best visit I've had in years,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+192,2021-04-27,93,62,1,Awful experience! Definitiely do not go here,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+82,2021-04-26,72,62,3,"Not bad, but didn't love what I went with this time",https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+101,2021-04-27,67,63,3,"Not bad, but didn't love what I went with this time",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+4,2021-05-17,29,52,5,They were amazing! Best visit I've had in years,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+15,2021-05-31,22,62,5,They were amazing! Best visit I've had in years,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+59,2021-04-13,16,56,4,Very good - I want to remember this one,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+29,2021-04-27,112,52,5,They were amazing! Best visit I've had in years,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+20,2021-05-29,87,63,5,They were amazing! Best visit I've had in years,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+19,2021-05-29,77,61,5,They were amazing! Best visit I've had in years,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+115,2021-04-26,75,57,2,"Probably wouldn't go back. Super friendly, but not great",https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+182,2021-04-27,70,58,1,Awful experience! Definitiely do not go here,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+160,2021-04-26,65,53,1,Awful experience! Definitiely do not go here,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+30,2021-04-27,62,51,5,They were amazing! Best visit I've had in years,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+142,2021-04-27,55,62,2,"Probably wouldn't go back. Super friendly, but not great",https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+199,2021-04-27,46,61,1,Awful experience! Definitiely do not go here,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+48,2021-05-29,106,54,4,Very good - I want to remember this one,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+17,2021-05-29,88,55,5,They were amazing! Best visit I've had in years,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+168,2021-05-31,86,61,1,Awful experience! Definitiely do not go here,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+1,2021-05-17,85,52,5,They were amazing! Best visit I've had in years,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+90,2021-05-29,76,58,3,"Not bad, but didn't love what I went with this time",https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+167,2021-05-31,74,59,1,Awful experience! Definitiely do not go here,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+79,2021-05-17,73,58,3,"Not bad, but didn't love what I went with this time",https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+73,2021-04-27,72,51,4,Very good - I want to remember this one,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+196,2021-04-27,70,65,1,Awful experience! Definitiely do not go here,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+106,2021-04-27,62,63,3,"Not bad, but didn't love what I went with this time",https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+85,2021-05-31,47,54,3,"Not bad, but didn't love what I went with this time",https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+36,2021-05-17,37,63,4,Very good - I want to remember this one,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+174,2021-05-29,32,62,1,Awful experience! Definitiely do not go here,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+170,2021-05-31,29,58,1,Awful experience! Definitiely do not go here,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+136,2021-04-27,26,57,2,"Probably wouldn't go back. Super friendly, but not great","https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+177,2021-04-13,109,57,1,Awful experience! Definitiely do not go here,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+190,2021-04-27,106,65,1,Awful experience! Definitiely do not go here,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+37,2021-05-17,104,55,4,Very good - I want to remember this one,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+10,2021-06-02,91,57,5,They were amazing! Best visit I've had in years,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+107,2021-05-17,91,51,2,"Probably wouldn't go back. Super friendly, but not great",https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+103,2021-04-27,89,58,3,"Not bad, but didn't love what I went with this time",https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+129,2021-05-29,83,56,2,"Probably wouldn't go back. Super friendly, but not great",https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+69,2021-04-27,78,57,4,Very good - I want to remember this one,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+191,2021-04-27,75,58,1,Awful experience! Definitiely do not go here,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+127,2021-05-29,69,64,2,"Probably wouldn't go back. Super friendly, but not great",https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+139,2021-04-27,69,63,2,"Probably wouldn't go back. Super friendly, but not great",https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+169,2021-05-31,60,63,1,Awful experience! Definitiely do not go here,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+61,2021-04-13,56,55,4,Very good - I want to remember this one,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+184,2021-04-27,47,65,1,Awful experience! Definitiely do not go here,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+104,2021-04-27,41,52,3,"Not bad, but didn't love what I went with this time",https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+159,2021-04-26,38,61,1,Awful experience! Definitiely do not go here,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+25,2021-04-13,14,63,5,They were amazing! Best visit I've had in years,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+55,2021-04-13,112,56,4,Very good - I want to remember this one,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+122,2021-05-31,92,65,2,"Probably wouldn't go back. Super friendly, but not great","https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+6,2021-04-26,81,51,5,They were amazing! Best visit I've had in years,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+178,2021-04-13,74,65,1,Awful experience! Definitiely do not go here,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+41,2021-04-26,68,64,4,Very good - I want to remember this one,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+152,2021-04-27,66,52,2,"Probably wouldn't go back. Super friendly, but not great",https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+98,2021-04-27,47,58,3,"Not bad, but didn't love what I went with this time","https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+130,2021-05-29,47,53,2,"Probably wouldn't go back. Super friendly, but not great",https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+110,2021-05-17,44,55,2,"Probably wouldn't go back. Super friendly, but not great","https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+49,2021-05-29,43,57,4,Very good - I want to remember this one,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0
+63,2021-04-27,38,52,4,Very good - I want to remember this one,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+77,2021-05-17,31,52,3,"Not bad, but didn't love what I went with this time",https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+46,2021-05-31,21,56,4,Very good - I want to remember this one,https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+111,2021-05-17,16,61,2,"Probably wouldn't go back. Super friendly, but not great",https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+153,2021-05-17,16,51,1,Awful experience! Definitiely do not go here,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+53,2021-04-13,93,59,4,Very good - I want to remember this one,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+140,2021-04-27,91,59,2,"Probably wouldn't go back. Super friendly, but not great",https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+52,2021-04-13,90,53,4,Very good - I want to remember this one,"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+94,2021-04-27,83,55,3,"Not bad, but didn't love what I went with this time",https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+95,2021-04-27,83,62,3,"Not bad, but didn't love what I went with this time",https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+2,2021-05-17,80,52,5,They were amazing! Best visit I've had in years,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+185,2021-04-27,68,55,1,Awful experience! Definitiely do not go here,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+188,2021-04-27,60,58,1,Awful experience! Definitiely do not go here,https://hypegalore.com/wp-content/uploads/sites/2/2019/12/Male-Polish-7.jpg,0
+118,2021-04-26,56,54,2,"Probably wouldn't go back. Super friendly, but not great",https://i.pinimg.com/originals/21/33/30/21333061e50df8fbec11a1df577f7d80.jpg,0
+162,2021-06-02,52,52,1,Awful experience! Definitiely do not go here,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+51,2021-05-29,51,55,4,Very good - I want to remember this one,https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+43,2021-06-02,35,58,4,Very good - I want to remember this one,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+156,2021-04-26,35,63,1,Awful experience! Definitiely do not go here,https://simplefixesformessymixes.files.wordpress.com/2013/03/painted-nails.jpg,0
+26,2021-04-13,21,58,5,They were amazing! Best visit I've had in years,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+187,2021-04-27,17,65,1,Awful experience! Definitiely do not go here,https://images-na.ssl-images-amazon.com/images/I/41hwKwH7ilL._AC_SY1000_.jpg,0
+197,2021-04-27,110,62,1,Awful experience! Definitiely do not go here,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOouJiiInm54x8kvx8i_4m1fhhONHkExn0ZA&usqp=CAU,0
+165,2021-05-31,103,60,1,Awful experience! Definitiely do not go here,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+105,2021-04-27,96,56,3,"Not bad, but didn't love what I went with this time",https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+35,2021-04-27,95,53,5,They were amazing! Best visit I've had in years,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+18,2021-05-29,92,65,5,They were amazing! Best visit I've had in years,https://lavendermagazine-com.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/12/FingernailsPainted_BigStock_janzwolinski.jpg,0
+100,2021-04-27,90,62,3,"Not bad, but didn't love what I went with this time","https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2020_49/3433588/201205-trevor-wilkinson-nail-polish-mn-2x1-1215-3433588.jpg",0
+194,2021-04-27,89,54,1,Awful experience! Definitiely do not go here,"https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+86,2021-05-31,62,59,3,"Not bad, but didn't love what I went with this time","https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale",0
+57,2021-04-13,61,59,4,Very good - I want to remember this one,https://i.ytimg.com/vi/WA_w7EfTbcY/maxresdefault.jpg,0
+143,2021-04-27,54,59,2,"Probably wouldn't go back. Super friendly, but not great",https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+75,2021-05-17,47,65,3,"Not bad, but didn't love what I went with this time",https://dailycollegian.com/wp-content/uploads/2018/09/4355178129_b04466754e_b-900x600.jpg,0
+155,2021-04-26,31,61,1,Awful experience! Definitiely do not go here,https://static6.depositphotos.com/1018611/555/i/950/depositphotos_5557430-stock-photo-just-from-fingernail-service.jpg,0
+181,2021-04-27,17,59,1,Awful experience! Definitiely do not go here,https://media.gettyimages.com/photos/cropped-image-of-woman-showing-painted-fingernails-picture-id1134720410?s=612x612,0

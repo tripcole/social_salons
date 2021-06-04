@@ -58,7 +58,7 @@
       <td class="one-eighth"><%= a_visit.salon.name %></td>
       <td class="one-eighth"><%= a_visit.rating %></td>
       <td class="one-eighth"><%= a_visit.comment %></td>
-      <td class="one-eighth"><img src="https://robohash.org/<%= a_visit.id %>"></td>
+      <td class="one-eighth"><img src="<%= a_visit.image %>" style="height:150px; width:150px"></td>
       <td class="one-eighth"><%= a_visit.likes_count %></td>
       <% if @current_user != nil %>
       <td class="one-eighth">

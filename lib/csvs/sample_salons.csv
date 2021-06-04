@@ -1,11 +1,16 @@
-﻿id,name,description,salon_type,street,city,state,zip_code
-1,Cool Nails,Cool Nails is a nail salon in Chicago.,Nail,201 North Garland Ct.,Chicago,Illinois,60601
-2,Hip Nails,Hip Nails is a nail salon in Chicago.,Nail,201 North Garland Ct.,Chicago,Illinois,60601
-3,Stylish Nails,Stylish Nails is a nail salon in Chicago.,Nail,201 North Garland Ct.,Chicago,Illinois,60601
-4,Color Nails,Color Nails is a nail salon in Chicago.,Nail,201 North Garland Ct.,Chicago,Illinois,60601
-5,Jane's Nails,Jane's Nails is a nail salon in Chicago.,Nail,201 North Garland Ct.,Chicago,Illinois,60601
-6,Floyd's Salon,Floyd's Salon is a hair salon in Chicago.,Hair,500 West Madison,Chicago,Illinois,60601
-7,Great Clips,Great Clips is a hair salon in Chicago.,Hair,500 West Madison,Chicago,Illinois,60601
-8,Sport Clips,Sport Clips is a hair salon in Chicago.,Hair,500 West Madison,Chicago,Illinois,60601
-9,Mega Clips,Mega Clips is a hair salon in Chicago.,Hair,500 West Madison,Chicago,Illinois,60601
-10,Hair Factory,Hair Factory is a hair salon in Chicago.,Hair,500 West Madison,Chicago,Illinois,60601
+﻿id,name,description,salon_type,street,city,state,zip_code,website
+1,Legendary Lash & Nail,Visit Chicago's premier luxury destination in the heart of Lakeview for all your nail needs.,Nail,1115 West Belmont Ave,Lakeview,IL,60657,legendarylash.com
+2,No1 Salon,"No.1 Salon provides Chicago, IL with quality premium cuts and color! Our stylist have years of experience and have a passion for hair and nails that shows in our work. Whether you need a haircut, color, perm, treatment or manicure, our licensed team can create the look you need.",Nail,2113 S China Pl,Chicago,IL,60616,no1salonchicago.com
+3,Orleans Nails and Spa,Orleans Nails and Spa offers premier nails care and spa treatment services to satisfy your needs of enhancing natural beauty and refreshing your day.,Nail,844 N Orleans St ,Chicago,IL,60610,orleansnailsandspa.com
+4,M&G Nails,M&G Nails offers manicures and pedicures.,Nail,3110 N Sheridan Rd,Chicago,IL,60657,mandgnails.com
+5,Logan Square Nail Salon,"Services include Pedicure & Manicure, Artificial Nails, No Chip Manicure and Waxing. We provide gift certificates and member reward cards. Hygiene is our top priority.",Nail,2453 N Milwaukee,Chicago,IL,60647,https://logansquarenailsalon.wixsite.com/logansquarenailsalon
+6,Tres Bien Nails,"Tres Bien Nails provides manicures and pedicures with great attention to detail, amazing color selection and a friendly team.",Nail,1939 W Division St ,Chicago,IL,60622,http://tres-bien-nails.lany.io/
+7,NAILàCARTE,"NailàCarte is the premier nail salon in Chicago’s West Loop and the best place to receive professional manicures, pedicures, and nail art services. We have a team of dedicated, professional nail technicians who deliver personalized, accessible nail care. Whether you want a no-chip manicure, powder dip nails, professional nail art, or a great pedicure, NailàCarte suits your unique needs. ",Nail,117 S Clinton St Fl 2,Chicago,IL,60661,nailacarte.com
+8,Juko Nail & Skin Rescue,"Step inside Juko Nail & Skin Rescue, and your skin, fingertips and toes will breathe a sigh of relief. We pamper you with manis, pedis, lash and brow services and waxing, all within our comfortable, modern spa environment.",Nail,2130 W Division St,Chicago,IL,60622,jukochicago.com
+9,Jenny's Nail Salon,We are a neighborhood nail salon specializing in nail care and waxing!We have the perfect environment for pampering and relaxing!,Nail,1503 W Lawrence Ave,Chicago,IL,60640,https://www.facebook.com/jennysnailsalonchi/
+10,Nails By Lina,Nails By Lina offers manicures and pedicures.,Nail,6411 N Cicero Ave,Lincolnwood,IL,60712,n/a
+11,J's Blossom Nail & Spa,"J's Blossom Nail & Spa provides nail & spa, massage, and waxing services.",Nail,719 S State St,Chicago,IL,60605,jsblossom.com
+12,Revive Nails,Revive Nails offers manicures and pedicures.,Nail,1144 N Milwaukee Ave ,Chicago,IL,60642,revivenails.com
+13,Plush Nail Salon,"Plush Nail Salon offers manicures, pedicures, and other nail services.",Nail,1848 W Chicago,Chicago,IL,60622,https://www.facebook.com/Plushnailsalon-553385625094449/
+14,Zenails,"Zenails is it a full service nails salon , we provides our best service for customers , stylish design offering a welcoming ambiance and friendly environment . ",Nail,2258 N Lincoln Ave,Chicago,IL,60614,https://www.facebook.com/Zenails-943022169158686/
+15,Chicago's Best Beauty,"Welcome to our nail salon. Whatever your needs may be, get in touch with us today for more details about our products and services. Wheelchair accessible entrance available. Appointment recommended. We look forward to meeting you.",Nail,2316 North California Ave,Chicago,IL,60647,https://chicagos-best-beauty.business.site/

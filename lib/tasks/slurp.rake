@@ -12,6 +12,7 @@ namespace :slurp do
     u.last_name = row["last_name"]
     u.email = row["email"]
     u.password = row["password"]
+    u.website = row["email"]
     u.save
     end
     puts "There are now #{User.count} rows in the users table"
@@ -48,6 +49,7 @@ namespace :slurp do
     v.user_id = row["user_id"]
     v.salon_id = row["salon_id"]
     v.rating = row["rating"]
+    v.image = row["image"]
     v.comment = row["comment"]
     v.save
     end

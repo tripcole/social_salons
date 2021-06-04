@@ -26,7 +26,7 @@
       <td class="one-eighth"><%= a_like.visit.salon.name %></td>
       <td class="one-eighth"><%= a_like.visit.rating %></td>
       <td class="one-eighth"><%= a_like.visit.comment %></td>
-      <td class="one-eighth"><img src="https://robohash.org/<%= a_like.visit.id %>"></td>
+      <td class="one-eighth"><img src="<%= a_like.visit.image %>" style="height:150px; width:150px"></td>
       <td class="one-eighth"><%= a_like.visit.likes_count %></td>
       <% if @current_user != nil %>
       <td class="one-eighth">
