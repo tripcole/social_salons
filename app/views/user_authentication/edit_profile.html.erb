@@ -1,6 +1,7 @@
 <div>
-  <h1> My Profile </h1>
-
+  <h1 class="my-new-font-head"> My Profile </h1>
+</div>
+<div class="my-new-font-body">
   <div>First Name: <%= @current_user.first_name %></div>
   <div>Last Name: <%= @current_user.last_name %></div>
   <div>
@@ -13,16 +14,16 @@
     <a href="/users/<%= @current_user.id %>/followers">See All</a> <span class="badge badge-secondary">New</span>
   <% else %>
   <% end %>
-</div>
 
-<div>
-  Following: <%= @my_following.count %> 
-  <% if @my_following.count != 0 %>
-    <a href="/users/<%= @current_user.id %>/following">See All</a>
-  <% elsif @my_pending_following.count != 0 %>
-    <a href="/users/<%= @current_user.id %>/following">See All</a> <button>Pending</button>
-  <% else %>
-  <% end %>
+  <div>
+    Following: <%= @my_following.count %> 
+    <% if @my_following.count != 0 %>
+      <a href="/users/<%= @current_user.id %>/following">See All</a>
+    <% elsif @my_pending_following.count != 0 %>
+      <a href="/users/<%= @current_user.id %>/following">See All</a> <button>Pending</button>
+    <% else %>
+    <% end %>
+  </div>
 </div>
 
 

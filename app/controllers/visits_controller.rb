@@ -25,7 +25,7 @@ class VisitsController < ApplicationController
     the_visit.rating = params.fetch("query_rating")
     the_visit.comment = params.fetch("query_comment")
     the_visit.image = params.fetch("query_image")
-    the_visit.likes_count = params.fetch("query_likes_count")
+    the_visit.likes_count = 0
 
     if the_visit.valid?
       the_visit.save

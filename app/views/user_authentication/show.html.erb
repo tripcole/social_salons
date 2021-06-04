@@ -1,94 +1,104 @@
 <% if @the_user != @current_user %>
-  <h1> <%= @the_user.username %>'s Profile </h1>
+  <h1 class="my-new-font-head"> <%= @the_user.username %>'s Profile </h1>
 <% else %>
-  <h1> My Profile </h1>
+  <h1 class="my-new-font-head"> My Profile </h1>
 <% end %>
 
+<div class="my-new-font-body">
+  <div>First Name: <%= @the_user.first_name %></div>
+  <div>Last Name: <%= @the_user.last_name %></div>
+  <div>
+    Followers: <%= @user_followers.count %> 
+    <% if  @user_followers.count != 0 %>
+      <a href="/users/<%= @the_user.id %>/followers">See All</a>
+    <% elsif @user_pending_followers.count != 0 && @the_user == @current_user %>
+      <a href="/users/<%= @the_user.id %>/followers">See All</a>
+    <% else %>
+    <% end %>
+  </div>
 
-<div>First Name: <%= @the_user.first_name %></div>
-<div>Last Name: <%= @the_user.last_name %></div>
-<div>
-  Followers: <%= @user_followers.count %> 
-  <% if  @user_followers.count != 0 %>
-    <a href="/users/<%= @the_user.id %>/followers">See All</a>
-  <% elsif @user_pending_followers.count != 0 && @the_user == @current_user %>
-    <a href="/users/<%= @the_user.id %>/followers">See All</a>
-  <% else %>
-  <% end %>
-</div>
+  <div>
+    Following: <%= @user_following.count %> 
+    <% if  @user_following.count != 0 %>
+      <a href="/users/<%= @the_user.id %>/following">See All</a>
+    <% elsif @user_pending_following.count != 0 && @the_user == @current_user %>
+      <a href="/users/<%= @the_user.id %>/following">See All</a>
+    <% else %>
+    <% end %>
+  </div>
 
-<div>
-  Following: <%= @user_following.count %> 
-  <% if  @user_following.count != 0 %>
-    <a href="/users/<%= @the_user.id %>/following">See All</a>
-  <% elsif @user_pending_following.count != 0 && @the_user == @current_user %>
-    <a href="/users/<%= @the_user.id %>/following">See All</a>
-  <% else %>
-  <% end %>
-</div>
-
-<div>
-<p>
-  <% if @the_user != @current_user %>
-    <% follow_request = FollowRequest.where({ :sender_id => @current_user.id, :recipient_id => @the_user.id }).at(0) %>
-        <% if follow_request == nil %>
-          <form action="/insert_follow_request" method="post">
-            <input type="hidden" name="query_recipient_id" value="<%= @the_user.id %>">
-            <button class="btn btn-outline-success btn-sm">Follow</button>
-          </form>
-        <% elsif follow_request.status == "pending" %>
-          <p>Request Sent
-          <a href="/delete_follow_request/<%= follow_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Withdraw</button></a></p>
-        <% elsif follow_request.status == "accepted" %>
-          <p> Following
-          <a href="/delete_follow_request/<%= follow_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Unfollow</button></a></p>
-        <% end %>
-  <% end %>
-</p>
+  <div>
+  <p>
+    <% if @the_user != @current_user %>
+      <% follow_request = FollowRequest.where({ :sender_id => @current_user.id, :recipient_id => @the_user.id }).at(0) %>
+          <% if follow_request == nil %>
+            <form action="/insert_follow_request" method="post">
+              <input type="hidden" name="query_recipient_id" value="<%= @the_user.id %>">
+              <button class="btn btn-outline-success btn-sm">Follow</button>
+            </form>
+          <% elsif follow_request.status == "pending" %>
+            <p>Request Sent
+            <a href="/delete_follow_request/<%= follow_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Withdraw</button></a></p>
+          <% elsif follow_request.status == "accepted" %>
+            <p> Following
+            <a href="/delete_follow_request/<%= follow_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm">Unfollow</button></a></p>
+          <% end %>
+    <% end %>
+  </p>
+  </div>
 </div>
 <hr>
 
 <% if @the_user != @current_user %>
-  <h2> <%= @the_user.username %>'s Recent Visits </h2>
+  <h2 class="my-new-font-head"> <%= @the_user.username %>'s Recent Visits </h2>
 <% else %>
-  <h2> My Recent Visits </h2>
+  <h2 class="my-new-font-head"> My Recent Visits </h2>
 <% end %>
 
-<table border="1">
-  <tr>
-    <th>Visit Date</th>
-    <th>Salon Name</th>
-    <th>Rating</th>
-    <th>Comments</th>
-    <th>Image</th>
-    <th>Number of Likes</th>
-    <th>Save this Idea!</th>
-    <th></th>
-  </tr>
-  <% @user_visits.each do |a_visit| %>
-  <tr>
-    <td><%= a_visit.visit_date.strftime('%D') %></td>
-    <td><%= a_visit.salon.name %></td>
-    <td><%= a_visit.rating %></td>
-    <td><%= a_visit.comment %></td>
-    <td><img src="https://robohash.org/<%= a_visit.id %>"></td>
-    <td><%= a_visit.likes_count %></td>
-    <td>
-      <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
-      <% if like == nil %>
-      <form action="/insert_like" method="post">
-        <input type="hidden" value="<%= a_visit.id %>" name="query_visit_id">
-        <button>Like</button>
-      </form>
+<div class="my-new-font-body">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" class="one-eighth">Visit Date</th>
+      <th scope="col" class="one-eighth">Salon Name</th>
+      <th scope="col" class="one-eighth">Rating</th>
+      <th scope="col" class="one-eighth">Comments</th>
+      <th scope="col" class="one-eighth">Image</th>
+      <th scope="col" class="one-eighth">Number of Likes</th>
+      <% if @current_user != nil %>
+        <th scope="col" class="one-eighth">Save this Idea!</th>
       <% else %>
-        <p>Saved for Later!</p>
-        <a href="/delete_like/<%= like.id %>"><button>Remove</button></a>
       <% end %>
-    </td>
-    <td><a href="visits/<%= a_visit.id %>">View details</a></td>
-  </tr>
+      <th scope="col" class="one-eighth"></th>
+    </tr>
+  </thead>
+  <% @user_visits.each do |a_visit| %>
+  <tbody>
+    <tr>
+      <td class="one-eighth"><%= a_visit.visit_date.strftime('%D') %></td>
+      <td class="one-eighth"><%= a_visit.salon.name %></td>
+      <td class="one-eighth"><%= a_visit.rating %></td>
+      <td class="one-eighth"><%= a_visit.comment %></td>
+      <td class="one-eighth"><img src="https://robohash.org/<%= a_visit.id %>"></td>
+      <td class="one-eighth"><%= a_visit.likes_count %></td>
+      <% if @current_user != nil %>
+        <td class="one-eighth">
+          <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
+          <% if like == nil %>
+          <form action="/insert_like" method="post">
+            <input type="hidden" value="<%= a_visit.id %>" name="query_visit_id">
+            <button class="btn btn-primary btn-sm btn-width-sm">Like</button>
+          </form>
+          <% else %>
+            <p>Saved for Later!</p>
+            <a href="/delete_like/<%= like.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-sm">Unlike</button></a>
+          <% end %>
+        </td>
+        <% else %>
+        <% end %>
+      <td class="one-eighth"><a href="visits/<%= a_visit.id %>">View Details</a></td>
+    </tr>
+  </tbody>
   <% end %>
 </table>
-
-
-
+</div>
