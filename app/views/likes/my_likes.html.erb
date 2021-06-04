@@ -2,38 +2,6 @@
   <h1 class="my-new-font-head">My Saved Ideas</h1>
 </div>
 
-<table border="1">
-  <tr>
-    <th>Visit Date</th>
-    <th>Salon Name</th>
-    <th>Rating</th>
-    <th>Comments</th>
-    <th>Image</th>
-    <th>Number of Likes</th>
-    <th>Saved Ideas!</th>
-    <th></th>
-  </tr>
-  <% @my_likes.each do |a_like| %>
-  <tr>
-    <td><%= a_like.visit.visit_date.strftime('%D') %></td>
-    <td><%= a_like.visit.salon.name %></td>
-    <td><%= a_like.visit.rating %></td>
-    <td><%= a_like.visit.comment %></td>
-    <td><img src="https://robohash.org/<%= a_like.visit.id %>"></td>
-    <td><%= a_like.visit.likes_count %></td>
-    <td>
-      <p>Saved on <%= a_like.created_at.strftime('%D') %> </p>
-      <a href="/delete_like/<%= a_like.id %>"><button>Remove</button></a>
-    </td>
-    <td><a href="/visits/<%= a_like.visit.id %>">View details</a></td>
-  </tr>
-  <% end %>
-</table>
-
-<div>
-  <h1 class="my-new-font-head">My Past Visits</h1>
-</div>
-
 <div class="my-new-font-body">
 <table class="table">
   <thead class="thead-dark">

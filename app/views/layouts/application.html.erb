@@ -32,6 +32,12 @@
       border: thin red solid;
     }
 
+    .one-fifth {
+      width: 20.0%;
+      text-align: center;
+      border: thin red solid;
+    }
+
     .btn-width-sm {
       width:50px;
     }
@@ -45,33 +51,53 @@
     <%= csp_meta_tag %>
 
   </head>
-
   <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">SocialSalons</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <% if @current_user != nil %>
+      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">SocialSalons</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/visits">Discover<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/salons">Salons<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/users/<%=@current_user.id%>/visits">My Past Visits<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/users/<%=@current_user.id%>/likes">My Saved Ideas<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/users/<%=@current_user.id%>/newsfeed">My Newsfeed<span class="sr-only">(current)</span></a>
-          </li>
-      </div>
-    </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/visits">Discover<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/salons">Salons<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/users/<%=@current_user.id%>/visits">My Past Visits<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/users/<%=@current_user.id%>/likes">My Saved Ideas<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/users/<%=@current_user.id%>/newsfeed">My Newsfeed<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <% else %>
+      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">SocialSalons</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/visits">Discover<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/salons">Salons<span class="sr-only">(current)</span></a>
+            </li>
+          <ul>
+        </div>
+      </nav>
+    <% end %>
 
       <a href="/users">All users</a>
       <a href="/salons">All salons</a>

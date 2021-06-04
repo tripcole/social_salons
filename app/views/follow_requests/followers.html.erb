@@ -1,59 +1,72 @@
 <% if @the_followed == @current_user %>
-<h1>My Followers</h1>
+<h1 class="my-new-font-head">My Followers</h1>
 <% else %>
-<h1> <%= @the_followed.username %>'s Followers</h1>
+<h1 class="my-new-font-head"> <%= @the_followed.username %>'s Followers</h1>
 <% end %>
 
 <% if @pending_followers.count != 0 && @the_followed == @current_user %>
-  <h3>Respond to Your Follow Requests!</h3>
-  <table border="1">
-      <tr>
-        <th>Username</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Received</th>
-        <th>Respond</th>
-      </tr>
+  <h3 class="my-new-font-head">Respond to Your Follow Requests!</h3>
+  
+  <div class="my-new-font-body">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="one-fifth">Username</th>
+          <th scope="col" class="one-fifth">First Name</th>
+          <th scope="col" class="one-fifth">Last Name</th>
+          <th scope="col" class="one-fifth">Received</th>
+          <th scope="col" class="one-fifth">Respond</th>
+        </tr>
+        </thead>
       <% @pending_followers.each do |a_request| %>
-      <tr>
-        <td><a href="/users/<%= a_request.sender.id %>"><%= a_request.sender.username %></a></td>
-        <td><%= a_request.sender.first_name %></td>
-        <td><%= a_request.sender.last_name %></td>
-        <td><%= time_ago_in_words(a_request.created_at) %> ago</td>
-        <td>
-          <form action="/modify_follow_request/<%= a_request.id %>" method="post">
-            <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
-            <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
-            <input type="hidden" value="accepted" name="query_status"><button class="btn btn-outline-success btn-sm btn-width-lg">Accept</button>
-          </form>
-          
-          <a href="/delete_follow_request/<%= a_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-lg">Decline</button></a>
-        </td>
-      </tr>
-      <% end %>
-    <table>
+        <tbody>
+          <tr>
+            <td class="one-fifth"><a href="/users/<%= a_request.sender.id %>"><%= a_request.sender.username %></a></td>
+            <td class="one-fifth"><%= a_request.sender.first_name %></td>
+            <td class="one-fifth"><%= a_request.sender.last_name %></td>
+            <td class="one-fifth"><%= time_ago_in_words(a_request.created_at) %> ago</td>
+            <td class="one-fifth">
+              <form action="/modify_follow_request/<%= a_request.id %>" method="post">
+                <input type="hidden" value="<%= a_request.sender_id %>" name="query_sender_id">
+                <input type="hidden" value="<%= @current_user.id %>" name="query_recipient_id">
+                <input type="hidden" value="accepted" name="query_status"><button class="btn btn-outline-success btn-sm btn-width-lg">Accept</button>
+              </form>
+              
+              <a href="/delete_follow_request/<%= a_request.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-lg">Decline</button></a>
+            </td>
+          </tr>
+        </tbody>
+    <% end %>
+    </table>
+  </div>
 <% else %>
 <% end %>
 
 <% if @current_followers.count != 0 %>
-  <h3>Followers</h3>
-  <table border="1">
-      <tr>
-        <th>Username</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Follower Since</th>
-        <th>Modify</th>
-      </tr>
-      <% @current_followers.each do |a_follower| %>
-      <tr>
-        <td><a href="/users/<%= a_follower.sender.id %>"><%= a_follower.sender.username %></a></td>
-        <td><%= a_follower.sender.first_name %></td>
-        <td><%= a_follower.sender.last_name %></td>
-        <td><%= time_ago_in_words(a_follower.created_at) %> ago</td>
-        <td><a href="/delete_follow_request/<%= a_follower.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-lg">Remove</button></a></td>
-      </tr>
-      <% end %>
-    <table>
+  <h3 class="my-new-font-head">Followers</h3>
+  <div class="my-new-font-body">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" class="one-fifth">Username</th>
+          <th scope="col" class="one-fifth">First Name</th>
+          <th scope="col" class="one-fifth">Last Name</th>
+          <th scope="col" class="one-fifth">Follower Since</th>
+          <th scope="col" class="one-fifth">Modify</th>
+        </tr>
+      </thead>
+    <% @current_followers.each do |a_follower| %>
+      <tbody>
+        <tr>
+          <td class="one-fifth"><a href="/users/<%= a_follower.sender.id %>"><%= a_follower.sender.username %></a></td>
+          <td class="one-fifth"><%= a_follower.sender.first_name %></td>
+          <td class="one-fifth"><%= a_follower.sender.last_name %></td>
+          <td class="one-fifth"><%= time_ago_in_words(a_follower.created_at) %> ago</td>
+          <td class="one-fifth"><a href="/delete_follow_request/<%= a_follower.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-lg">Remove</button></a></td>
+        </tr>
+      </tbody>
+    <% end %>
+    </table>
+    </div>
 <% else %>
 <% end %>
