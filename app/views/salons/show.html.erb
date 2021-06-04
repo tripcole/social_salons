@@ -1,9 +1,9 @@
 <div>
   <div>
-    <h1>
+    <h1 class="my-new-font-head">
       Salon #<%= @the_salon.id %> details
     </h1>
-
+  <div class="my-new-font-body">
     <div>
       <div>
         <a href="/salons">
@@ -91,86 +91,4 @@
     </dl>
   </div>
 </div>
-
-<hr>
-
-
-<div>
-  <div>
-    <h2>
-      Edit salon
-    </h2>
-
-    <form action="/modify_salon/<%= @the_salon.id %>"  method="post" >
-      <div>
-        <label for="name_box">
-          Name
-        </label>
-
-        <input type="text" id="name_box" name="query_name" value="<%= @the_salon.name %>">
-      </div>
-
-      <div>
-        <label for="description_box">
-          Description
-        </label>
-
-        <input type="text" id="description_box" name="query_description" value="<%= @the_salon.description %>">
-      </div>
-
-      <div>
-        <label for="salon_type_box">
-          Salon type
-        </label>
-
-        <input type="text" id="salon_type_box" name="query_salon_type" value="<%= @the_salon.salon_type %>">
-      </div>
-
-      <div>
-        <label for="street_box">
-          Street
-        </label>
-
-        <input type="text" id="street_box" name="query_street" value="<%= @the_salon.street %>">
-      </div>
-
-      <div>
-        <label for="city_box">
-          City
-        </label>
-
-        <input type="text" id="city_box" name="query_city" value="<%= @the_salon.city %>">
-      </div>
-
-      <div>
-        <label for="state_box">
-          State
-        </label>
-
-        <input type="text" id="state_box" name="query_state" value="<%= @the_salon.state %>">
-      </div>
-
-      <div>
-        <label for="zip_code_box">
-          Zip code
-        </label>
-
-        <input type="text" id="zip_code_box" name="query_zip_code" value="<%= @the_salon.zip_code %>">
-      </div>
-
-      <div>
-        <label for="address_box">
-          Address
-        </label>
-
-        <input type="text" id="address_box" name="query_address" value="<%= @the_salon.address %>">
-      </div>
-
-      <button>
-        Update salon
-      </button>
-    </form>
-  </div>
 </div>
-
-<hr>
