@@ -40,8 +40,8 @@
       padding: 0px;
       justify-content: space-between;
       display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 550px 550px 550px 550px;
+      grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
+      grid-template-rows: 450px 450px 450px 450px 450px 450px;
     }
 
     .one-eighth {
@@ -56,12 +56,14 @@
 
     .btn-width-sm {
       width:60px;
+      font-size: 12px;
     }
     .btn-width-lg {
       width:75px;
+      font-size: 12px;
     }
     .btn-width-nav {
-      width:125px;
+      width:150px;
       padding: 0px;
       border: thin midnightblue solid;
     }
@@ -108,8 +110,8 @@
           </ul>
           <span class="navbar-text">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option2"> <a href="/users/<%= @current_user.id %>"><%= @current_user.username %></a></label>
-              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option3"> <a href="/user_sign_out">Sign Out</a></label>
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option2"> <a href="/users/<%= @current_user.id %>"><i class="fas fa-edit"></i>  <%= @current_user.username %></a></label>
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option3"> <a href="/user_sign_out"><i class="fas fa-hand-peace"></i> Sign Out</a></label>
             </div>
           </span>
         </div>
@@ -132,13 +134,18 @@
           </ul>
           <span class="navbar-text">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option2"> <a href="/user_sign_in">Sign-In</a></label>
-              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option3"> <a href="/user_sign_up">Create Account</a></label>
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option2"> <a href="/user_sign_in"><i class="fas fa-sign-in-alt"></i> Sign-In</a></label>
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option3"> <a href="/user_sign_up"><i class="fas fa-user-plus"></i> Create Account</a></label>
             </div>
           </span>
         </div>
       </nav>
     <% end %>
+
+    <div class="my-new-font-body">
+      <%= alert %>
+      <%= notice %>
+    </div>
     
     <p>
       <a href="/users">All users</a>

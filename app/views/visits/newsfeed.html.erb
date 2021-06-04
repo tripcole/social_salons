@@ -2,6 +2,52 @@
   <h1 class="my-new-font-head">My Friends' Activity</h1>
 </div>
 
+<div class="visit-card">
+<% @my_following.each do |a_following| %>
+    <tr>
+      <% fan = a_following.recipient.id %>
+        <% matching_visits = Visit.all %>
+        <% following_visits = matching_visits.where({ :user_id => fan }) %>
+          <% following_visits.each do |a_visit| %>
+<div  style="padding:5px">
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://img.huffingtonpost.com/asset/580f74641a000018275bba1f.jpg?ops=crop_27_42_973_614,scalefit_630_noupscale" class="card-img-top" alt="No Image">
+      <div class="card-body">
+        <h5 class="card-title" style="font-size: 14px"><a href="/users/<%= a_visit.user.id%>"><%= a_visit.user.username %></a>'s <%= a_visit.salon.salon_type %> Idea</h5>
+        <div class="card-text" style="height: 100px; overflow: hidden; font-size: 12px"> 
+          <%= a_visit.salon.name %>, <%= a_visit.salon.city %>, <%= a_visit.salon.state %>
+          <p><%= a_visit.comment %></p>
+        </div>
+        <div style="height: 70px; overflow: hidden; font-size: 12px">
+          <% a_visit.rating.times do %></td><i class="fas fa-star"></i><% end %> | 
+          <i class="fas fa-thumbs-up"></i> <%= a_visit.likes_count %>
+        <% if @current_user != nil %>
+          <% like = Like.where({ :fan_id => @current_user.id, :visit_id => a_visit.id }).at(0) %>
+            <% if like == nil %>
+            <form action="/insert_like" method="post">
+              <input type="hidden" value="<%= a_visit.id %>" name="query_visit_id">
+              <p> </p>
+              <button class="btn btn-primary btn-sm btn-width-sm">Like</button>
+            </form>
+            <% else %>
+              <div>Saved for Later!</div>
+              <a href="/delete_like/<%= like.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-sm">Unlike</button></a>
+            <% end %>
+        <% else %>
+        <% end %>
+          </div>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted" style="font-size: 12px">Visit Occurred on <%= a_visit.visit_date.strftime('%D') %></small>
+      </div>
+    </div>
+  </div>
+</div>
+  <% end %>
+<% end %>
+</div>
+
 <table border="1">
   <tr>
     <th>Visit Date</th>
