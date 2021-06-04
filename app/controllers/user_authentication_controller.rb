@@ -51,16 +51,6 @@ class UserAuthenticationController < ApplicationController
     render({ :template => "likes/my_likes.html.erb"})
   end
 
-  # def newsfeed
-  #   matching_visits = Visit.all
-  #   @list_of_following_visits = matching_visits.at(0)
-
-  #   # @list_of_following_visits 
-  #   # = following_visits.order({ :likes_count => :desc })
-
-  #   render({ :template => "visits/following_visits.html.erb" })
-  # end
-
   def sign_in_form
     render({ :template => "user_authentication/sign_in.html.erb" })
   end
