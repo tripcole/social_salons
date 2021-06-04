@@ -26,6 +26,11 @@
       padding: 5px;  
     }
 
+    .my-new-font-nav {
+      font-family: 'Cabin', sans-serif;
+      font-family: 'Roboto Condensed', sans-serif;  
+    }
+
     .one-eighth {
       width: 12.5%;
       text-align: center;
@@ -44,6 +49,11 @@
     .btn-width-lg {
       width:75px;
     }
+    .btn-width-nav {
+      width:125px;
+      padding: 0px;
+      border: thin midnightblue solid;
+    }
     </style>
 
     <meta charset="utf-8">
@@ -51,7 +61,7 @@
     <%= csp_meta_tag %>
 
   </head>
-  <body>
+  <body class="my-new-font-nav">
     <% if @current_user != nil %>
       <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="/">SocialSalons</a>
@@ -77,6 +87,12 @@
               <a class="nav-link" href="/users/<%=@current_user.id%>/newsfeed">My Newsfeed<span class="sr-only">(current)</span></a>
             </li>
           </ul>
+          <span class="navbar-text">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option2"> <a href="/users/<%= @current_user.id %>"><%= @current_user.username %></a></label>
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option3"> <a href="/user_sign_out">Sign Out</a></label>
+            </div>
+          </span>
         </div>
       </nav>
     <% else %>
@@ -94,30 +110,25 @@
             <li class="nav-item active">
               <a class="nav-link" href="/salons">Salons<span class="sr-only">(current)</span></a>
             </li>
-          <ul>
+          </ul>
+          <span class="navbar-text">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option2"> <a href="/user_sign_in">Sign-In</a></label>
+              <label class="btn btn-secondary btn-width-nav"><input type="radio" name="options" id="option3"> <a href="/user_sign_up">Create Account</a></label>
+            </div>
+          </span>
         </div>
       </nav>
     <% end %>
-
+    
+    <p>
       <a href="/users">All users</a>
       <a href="/salons">All salons</a>
       <a href="/visits">All visits</a>
       <a href="/likes">All likes</a>
       <a href="/follow_requests">All follow requests</a>
-
-    <hr>
-    <ul>
-      <% if @current_user.blank? %>
-        <li><a href="/user_sign_in">Sign in</a></li>
-        <li><a href="/user_sign_up">Sign up</a></li>
-      <% else %>
-        <li><a href="/edit_user_profile"><%= @current_user.username %></a></li>
-        <li><a href="/user_sign_out">Sign out</a></li>
-        <li><a href="/users/<%=@current_user.id%>/visits">My Visits</a></li>
-        <li><a href="/users/<%=@current_user.id%>/likes">My Saved Ideas</a></li>
-      <% end %>
-    </ul>
-
+    </p>  
+    
     <%= yield %>
   </body>
 </html>
