@@ -2,7 +2,13 @@
   <h1 class="my-new-font-head">Browse Visits for New Ideas</h1>
 </div>
 
-<div class="visit-card">
+<div class="my-new-font-body">
+  <button type="button" class="btn btn-secondary btn-width-lg my-new-font-body">Log a Visit</button>
+</div>
+
+<hr>
+
+<div class="visit-card my-new-font-body">
 <% @list_of_visits.each do |a_visit| %>
 <div  style="padding:5px">
   <div class="col mb-4">
@@ -27,7 +33,7 @@
             </form>
             <% else %>
               <div>Saved for Later!</div>
-              <a href="/delete_like/<%= like.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-sm">Unlike</button></a>
+              <a href="/delete_like/<%= like.id %>"><button type="button" class="btn btn-outline-danger btn-sm btn-width-sm ">Unlike</button></a>
             <% end %>
         <% else %>
         <% end %>
